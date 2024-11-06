@@ -1,0 +1,607 @@
+:root {
+    --main-color: #098BBB;
+    --secondary-color: #1e2639E6;
+    --tert-color: #1E2639;
+    --quart-color: #0F204B;
+    --white: #FFF;
+    --black: #000;
+    --box-shadow1: 0.2rem 0.2rem rgba(0, 0, 0, .1);
+    --box-shadow2: 0.1rem 0.1rem #098BBB;
+}
+
+/* Fonts */
+@font-face {
+    font-family: kantumruy-reg;
+    src: url("../font/kantumruy/KantumruyPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: kantumruy-med;
+    src: url("../font/kantumruy/KantumruyPro-Medium.ttf");
+}
+
+@font-face {
+    font-family: kantumruy-bold;
+    src: url("../font/kantumruy/KantumruyPro-Bold.ttf");
+}
+
+/* General Styles */
+body {
+    font-family: kantumruy-reg;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #098BBB;
+}
+
+p {
+    font-family: kantumruy-bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 5rem 2%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+/* Section Header */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 1000;
+    align-items: center;
+    padding: 1rem 2%;
+    box-shadow: var(--box-shadow1);
+}
+
+.couleur {
+    color: var(--main-color);
+}
+
+.header .header-icon {
+    width: 40px;
+}
+
+.header img {
+    width: 150px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-family: kantumruy-med;
+    display: inline-flex;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+.header .navbar .centre {
+    display: flex;
+}
+
+.centre {
+    display: flex;
+    align-items: center;
+}
+
+.btn-secondary {
+    color: var(--white);
+    padding: 8px;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--quart-color);
+}
+
+/* Section Hero */
+.hero {
+    position: relative;
+    padding: 100px 6%;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../image/3409297.jpg) no-repeat center center/cover;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.btn-container {
+    text-align: right;
+}
+
+.btn-design-hero {
+    padding: 5px 10px;
+    color: white;
+    font-family: kantumruy-med;
+    font-size: 1.5rem;
+    border-radius: 30px 0;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0;
+    border: 2px solid #5A89FF;
+}
+
+.hero h1 {
+    font-family: kantumruy-bold;
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-top: 30px;
+    text-align: left;
+    font-family: kantumruy-reg;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 20px 0;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 40vw;
+}
+
+.btn-primary:hover {
+    background-color: var(--quart-color);
+}
+
+/* section a propos */
+
+.about {
+    padding: 50px;
+    background: url(/assets/image/blanche\ background.jpg) no-repeat;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: kantumruy-bold;
+    font-size: 2.5rem;
+    color: #098BBB;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    gap: 100px;
+    margin-top: 70px;
+}
+
+.about-content p {
+    text-align: justify;
+
+}
+
+/* .point {
+    background-color: var(--main-color);
+    width: 10vh;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cercle {
+    background-color: var(--black);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+    */
+
+.about-text {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline;
+}
+
+.about-text::after {
+    content: '';
+    width: 5px;
+    height: 293px;
+    display: block;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -5px;
+    top: 8px;
+}
+
+.about-text p {
+    font-family: kantumruy-med;
+    margin-left: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.about-text .sous-texte {
+    font-family: kantumruy-bold;
+    margin-left: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.about-image1 {
+    width: 400px;
+    margin-bottom: 20px;
+    border-radius: 20px 20px 20px 80px;
+}
+
+.about-image2 {
+    width: 250px;
+    border-radius: 30px;
+    margin-right: -150px;
+}
+
+.about-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.about-feature {
+    margin: 0 20px;
+    text-align: center;
+    display: flex;
+}
+
+.about-feature p {
+    text-align: left;
+    color: var(--main-color);
+    font-family: kantumruy-bold;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.about-text .btn-primary1 a{
+    background-color: #098BBB;
+    color: white;
+    padding: 12px 40px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-family: kantumruy-bold;
+    border: none;
+    border-radius: 20px 0;
+    cursor: pointer;
+}
+
+.btn-primary1 a:hover {
+    background-color: #0F204B;
+}
+
+.about .btn-more {
+    border-radius: 20px;
+    padding: 10px 40px;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    font-family: kantumruy-bold;
+    background-color: #0F204B;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 826px;
+}
+
+/* Section Services */
+.services {
+    padding: 60px 2%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-family: kantumruy-bold;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow1);
+    flex-basis: 20%;
+    display: flex;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    font-family: kantumruy-bold;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.service-item p {
+    font-family: kantumruy-reg;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Custom card */
+
+.card {
+    display: flex;
+    flex-basis: 30%;
+    position: relative;
+    box-sizing: content-box;
+    margin: 15px;
+}
+
+.card .more-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+.btn-more {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: 0;
+    color: white;
+    background-color: #0F204B;
+    cursor: pointer;
+}
+
+.card img {
+    width: 10rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.card .content {
+    padding: 10px;
+    border-top: 1px solid #098BBB;
+    border-right: 1px solid #098BBB;
+    border-bottom: 1px solid #098BBB;
+}
+
+.card .content h3 {
+    color: var(--main-color);
+    font-family: kantumruy-med;
+    font-size: 22px;
+}
+
+.card .content p {
+    font-family: kantumruy-reg;
+    font-size: 18px;
+}
+
+
+/* Appel transitionserrvice et footer */
+.bloc-appelez {
+    width: fit-content;
+    background-color: var(--main-color);
+    padding: 10px;
+    margin: 50px auto 0 auto;
+    border-radius: 15px;
+}
+
+.bloc-appelez .info-appel {
+    display: flex;
+    align-items: center;
+}
+
+.bloc-appelez p {
+    color: var(--white);
+    width: 150px;
+    margin: 0;
+}
+
+/* style du footer*/
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: kantumruy-reg;
+}
+
+.footer-top {
+    display: flex;
+    gap: 100px;
+    background-color: var(--main-color);
+    padding: 20px;
+}
+
+.about-footer-text h3 {
+    font-size: 24px;
+    font-weight: medium;
+}
+
+.about-footer-text p {
+    font-family: kantumruy-reg;
+    margin: 10px 0;
+}
+
+.newsletter-signup {
+    margin-top: 30px;
+}
+
+.newsletter-signup input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 10px 0 0 0;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: medium;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.footer-column {
+    max-width: 200px;
+}
+
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.footer-column h5 {
+    font-weight: normal;
+    font-size: medium;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    opacity: 0.8;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    line-height: 30px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo-column img {
+    margin-bottom: 15px;
+    width: 150px;
+
+}
+
+.logo-column p {
+    line-height: 20px;
+    font-family: kantumruy-reg;
+    font-size: 15px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.logo-column a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-column a:hover {
+    text-decoration: underline;
+}
+
+.contact-column p {
+    line-height: 30px;
+    font-family: kantumruy-reg;
+    opacity: 0.8;
+}
+
+.contact-column p a {
+    color: var(--white);
+}
+
+.contact-column p a:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.besoin {
+    line-height: 10px;
+    margin-left: 10em;
+    margin-bottom: 20px;
+}
+
+.besoin p {
+    color: var(--main-color);
+}
+
+.besoin .consultation {
+    color: var(--white);
+}
+
+.besoin .consultation:hover {
+    color: var(--main-color);
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    background-color: var(--tert-color);
+    border-top: 0px solid var(--main-color);
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    margin-left: 25px;
+    opacity: 0.6;
+    margin-top: 10px;
+}
