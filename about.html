@@ -12,7 +12,7 @@
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
-            <a href="#"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe" /></a>
+            <a href="index.html"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe" /></a>
             <div>
                 <a href="index.html">Accueil</a>
                 <a href="#" class="couleur">À propos de nous</a>
@@ -101,15 +101,15 @@
                 <p>Pour recevoir nos actualités et mises à jour directement dans votre boîte de réception.</p>
             </div>
             <div class="newsletter-signup">
-                <input type="email" placeholder="Votre Adresse E-Mail" />
-                <button>S'INSCRIRE</button>
+                <input type="email" id="email" placeholder="Votre Adresse E-Mail" required/>
+                <button type="submit">S'INSCRIRE</button>
             </div>
         </div>
 
         <div class="footer-main">
             <div class="footer-column logo-column">
                 <img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe">
-                <p>Mahiratra Groupe est un fournisseur de services de conseil informatique et de développement de
+                <p class="tex">Mahiratra Groupe est un fournisseur de services de conseil informatique et de développement de
                     logiciels.
                     Après avoir débuté en tant que petite entreprise de produits d'IA, nous sommes passés aux services
                     informatiques et depuis,
@@ -124,14 +124,14 @@
                     Tanambao Antalaha 206
                     Madagascar </p>
                 <h5>Contact</h5>
-                <p>Envoyez-nous un mail : <a href="mailto:mahiratragroupe@gm.com">mahiratragroupe@gmail.com</a></p>
+                <p>Envoyez-nous un mail : <a href="mailto:mahiratragroupe@gmail.com">mahiratragroupe@gmail.com</a></p>
             </div>
 
             <div class="footer-column company-column">
                 <h4>Entreprise</h4>
                 <ul>
-                    <li><a href="index.html">Acceuil</a></li>
-                    <li><a href="#">À propos de nous</a></li>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="about.html">À propos de nous</a></li>
                     <li><a href="contact.html">Contactez-nous</a></li>
                     <li><a href="service.html">Services</a></li>
                 </ul>
@@ -140,11 +140,11 @@
             <div class="footer-column services-column">
                 <h4>Nos services</h4>
                 <ul>
-                    <li><a href="#">Services d'application</a></li>
-                    <li><a href="#">Transformation numérique</a></li>
-                    <li><a href="#">Conseil en informatique</a></li>
-                    <li><a href="#">Gestion et support</a></li>
-                    <li><a href="#">Développement de logiciels</a></li>
+                    <li><a href="service_d_application.html">Services d'application</a></li>
+                    <li><a href="transformation_numerique.html">Transformation numérique</a></li>
+                    <li><a href="conseil_en_informatique.html">Conseil en informatique</a></li>
+                    <li><a href="gestion_et_support.html">Gestion et support</a></li>
+                    <li><a href="developpement_de_logiciels.html">Développement de logiciels</a></li>
                 </ul>
             </div>
 
@@ -157,13 +157,18 @@
             </div>
         </div>
 
-        <div class="besoin">
-            <p>BESOIN D'AIDE ?</p>
-            <a class="consultation" href="contact.html">Consultation gratuite</a>
+        <div class="abesoin">
+            <div class="p-besoin">
+                <img src="./assets/image/help-button-1701468_1280.png" alt="help">
+            </div>
+            <div class="besoin">
+                <p>BESOIN D'AIDE ?</p>
+                <a class="consultation" href="contact.html">Consultation gratuite</a>
+            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>© 2024 Mahiratra Groupe. Tous droits réservés.</p>
+            <div class="p">© 2024 Mahiratra Groupe. Tous droits réservés.</div>
         </div>
     </footer>
 </body>

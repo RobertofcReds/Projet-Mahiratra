@@ -14,6 +14,21 @@
 
 <body>
 
+    <!-- <div id="search-popup" class="search-popup popup-visible">
+    <div class="close-search"><i class="fas  fa-times"></i></div>
+        <div class="popup-inner">
+            <div class="overlay-layer"></div>
+                <div class="search-form">
+                    <fieldset>
+                        <form role="search" method="get" action="index.html">
+	                        <input type="search" class="search" placeholder="Recherche..." value="" name="s" title="Recherche">
+	                        <button type="submit" class="sch_btn"> <i class="icon-search"></i></button>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div> -->
+
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
@@ -170,15 +185,15 @@
                 <p>Pour recevoir nos actualités et mises à jour directement dans votre boîte de réception.</p>
             </div>
             <div class="newsletter-signup">
-                <input type="email" placeholder="Votre Adresse E-Mail" />
-                <button>S'INSCRIRE</button>
+                <input type="email" id="email" placeholder="Votre Adresse E-Mail" required/>
+                <button type="submit">S'INSCRIRE</button>
             </div>
         </div>
 
         <div class="footer-main">
             <div class="footer-column logo-column">
                 <img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe">
-                <p>Mahiratra Groupe est un fournisseur de services de conseil informatique et de développement de
+                <p class="tex">Mahiratra Groupe est un fournisseur de services de conseil informatique et de développement de
                     logiciels.
                     Après avoir débuté en tant que petite entreprise de produits d'IA, nous sommes passés aux services
                     informatiques et depuis,
@@ -193,7 +208,7 @@
                     Tanambao Antalaha 206
                     Madagascar </p>
                 <h5>Contact</h5>
-                <p>Envoyez-nous un mail : <a href="mailto:mahiratragroupe@gm.com">mahiratragroupe@gmail.com</a></p>
+                <p>Envoyez-nous un mail : <a href="mailto:mahiratragroupe@gmail.com">mahiratragroupe@gmail.com</a></p>
             </div>
 
             <div class="footer-column company-column">
@@ -209,11 +224,11 @@
             <div class="footer-column services-column">
                 <h4>Nos services</h4>
                 <ul>
-                    <li><a href="#">Services d'application</a></li>
-                    <li><a href="#">Transformation numérique</a></li>
-                    <li><a href="#">Conseil en informatique</a></li>
-                    <li><a href="#">Gestion et support</a></li>
-                    <li><a href="#">Développement de logiciels</a></li>
+                    <li><a href="service_d_application.html">Services d'application</a></li>
+                    <li><a href="transformation_numerique.html">Transformation numérique</a></li>
+                    <li><a href="conseil_en_informatique.html">Conseil en informatique</a></li>
+                    <li><a href="gestion_et_support.html">Gestion et support</a></li>
+                    <li><a href="developpement_de_logiciels.html">Développement de logiciels</a></li>
                 </ul>
             </div>
 
@@ -226,13 +241,18 @@
             </div>
         </div>
 
-        <div class="besoin">
-            <p>BESOIN D'AIDE ?</p>
-            <a class="consultation" href="#">Consultation gratuite</a>
+        <div class="abesoin">
+            <div class="p-besoin">
+                <img src="./assets/image/help-button-1701468_1280.png" alt="help">
+            </div>
+            <div class="besoin">
+                <p>BESOIN D'AIDE ?</p>
+                <a class="consultation" href="contact.html">Consultation gratuite</a>
+            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>© 2024 Mahiratra Groupe. Tous droits réservés.</p>
+            <div class="p">© 2024 Mahiratra Groupe. Tous droits réservés.</div>
         </div>
     </footer>
 

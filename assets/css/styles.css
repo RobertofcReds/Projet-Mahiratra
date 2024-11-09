@@ -113,11 +113,14 @@ a:hover {
     color: var(--white);
     padding: 8px;
     background-color: var(--main-color);
-    border-radius: 15px;
+    border-radius: 15px 0;
 }
 
 .btn-secondary:hover {
-    background-color: var(--quart-color);
+    background-color: var(--white);
+    border-radius: 0 15px;
+    transition: 500ms;
+    border: 1.5px solid var(--main-color);
 }
 
 /* Section Hero */
@@ -138,6 +141,10 @@ a:hover {
     background: url(../image/3409297.jpg) no-repeat center center/cover;
     opacity: 0.75;
     z-index: -1;
+}
+
+.hero-content a span {
+    color: var(--white);
 }
 
 .btn-container {
@@ -183,7 +190,10 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background-color: var(--quart-color);
+    background-color: var(--white);
+    border: 1.5px solid var(--main-color);
+    transition: 500ms;
+    border-radius: 0 20px;
 }
 
 /* section a propos */
@@ -302,7 +312,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.about-text .btn-primary1 a{
+.about-text .btn-primary1 a {
     background-color: #098BBB;
     color: white;
     padding: 12px 40px;
@@ -449,6 +459,8 @@ a:hover {
     margin: 0;
 }
 
+
+
 /* style du footer*/
 footer {
     background-color: var(--secondary-color);
@@ -461,6 +473,7 @@ footer {
     gap: 100px;
     background-color: var(--main-color);
     padding: 20px;
+    padding-left: 40px;
 }
 
 .about-footer-text h3 {
@@ -497,16 +510,16 @@ footer {
 .footer-main {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 40px;
 }
 
 .footer-column {
-    max-width: 200px;
+    max-width: 300px;
 }
 
 .footer-column h4 {
-    font-weight: bold;
-    margin-bottom: 50px;
+    font-weight: medium;
+    padding-bottom: 10px;
 }
 
 .footer-column h5 {
@@ -519,7 +532,6 @@ footer {
 .footer-column ul {
     list-style-type: none;
     padding: 0;
-    opacity: 0.8;
 }
 
 .footer-column ul li {
@@ -528,7 +540,7 @@ footer {
 }
 
 .footer-column ul li a {
-    color: white;
+    color: #cbcdd1;
     text-decoration: none;
 }
 
@@ -543,17 +555,16 @@ footer {
 }
 
 .logo-column p {
-    line-height: 20px;
+    line-height: 25px;
     font-family: kantumruy-reg;
     font-size: 15px;
     margin-bottom: 10px;
-    opacity: 0.8;
+    color: #cbcdd1;
 }
 
 .logo-column a {
     color: var(--main-color);
     text-decoration: none;
-    font-weight: bold;
 }
 
 .logo-column a:hover {
@@ -563,7 +574,7 @@ footer {
 .contact-column p {
     line-height: 30px;
     font-family: kantumruy-reg;
-    opacity: 0.8;
+    color: #cbcdd1;
 }
 
 .contact-column p a {
@@ -575,10 +586,22 @@ footer {
     color: var(--main-color);
 }
 
+.abesoin {
+    display: flex;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    margin-top: -40px;
+}
+
+.abesoin .p-besoin img{
+    width: 80px;
+}
+
 .besoin {
     line-height: 10px;
-    margin-left: 10em;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .besoin p {
@@ -594,14 +617,15 @@ footer {
 }
 
 .footer-bottom {
-    padding: 10px 0;
+    padding: 8px 40px 8px 40px;
     background-color: var(--tert-color);
     border-top: 0px solid var(--main-color);
 }
 
-.footer-bottom p {
+.footer-bottom .p {
     font-size: 15px;
-    margin-left: 25px;
-    opacity: 0.6;
-    margin-top: 10px;
+    padding: 10px;
+    font-family: kantumruy-reg;
+    display: flex;
+    color: #cbcdd1;
 }
