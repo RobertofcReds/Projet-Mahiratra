@@ -9,11 +9,81 @@
 </head>
 
 <body>
+
+
+    <!-- Section Partie caché de barre de contact -->
+
+    <div id="contactBlock" class="contact-block">
+        <div class="divBody">
+            <form action="#" method="POST"></form>
+            <span class="close-btn" id="closeContactBtn">&times;</span>
+            <div class="tex-contactBody">
+                <div class="imagg">
+                    <img src="./assets/image/Mahiratra.jpg" alt="Mahiratra">
+                    <p class="tex-img">Vous souhaitez nous contactez ?</p>
+                </div>
+                <div class="tex-details">
+                    <p class="p1"><span><span class="mar">____</span>Mahiratra Groupe</span> est un fournisseur
+                        de
+                        services de conseil informatique et de
+                        développement de logiciels. Après avoir débuté en tant que petite entreprise de produits
+                        d'IA, nous
+                        sommes passés aux services informatiques et depuis, nous avons aidé les organisations
+                        informatiques
+                        et les sociétés de produits logiciels à améliorer leurs performances commerciales et à
+                        gagner
+                        rapidement de nouveaux clients.</p>
+                    <p class="p2">EN SAVOIR PLUS</p>
+                    <p class="p3">© 2024 Mahiratra Groupe. Tous droits réservés.</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="cadra">
+
+                        <div class="form-group">
+                            <label for="name">VOTRE NOM</label>
+                            <input type="text" id="name" name="name" placeholder="Entrez Votre Nom" required>
+                            <i class="icon-user">
+                                <img src="./assets/image/votre nom.PNG" alt="name">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">VOTRE EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Entrez Votre Email" required>
+                            <i class="icon-email">
+                                <img src="./assets/image/votr email.PNG" alt="email">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">SUJET</label>
+                            <input type="text" id="subject" name="subject" placeholder="Entrez Votre Sujet" required>
+                            <i class="icon-folder">
+                                <img src="./assets/image/votre sujet.PNG" alt="subject">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">VOTRE MESSAGE (OPTIONNEL)</label>
+                            <textarea id="message" name="message" placeholder="Entrez Votre Message"></textarea>
+                            <i class="icon-message">
+                                <img src="./assets/image/votre message.PNG" alt="message">
+                            </i>
+                        </div>
+                        <button type="submit">SOUMETTRE</button>
+                    </div>
+                </form>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
             <a href="index.html"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe" /></a>
-            <div>
+            <div class="scale">
                 <a href="index.html">Accueil</a>
                 <a href="about.html">À propos de nous</a>
                 <a href="service.html">Nos services</a>
@@ -21,7 +91,8 @@
             <div class="centre">
                 <a href="#"><img class="header-icon" src="./assets/image/chercher.png" alt="Icon pour chercher" /></a>
                 <a href="contact.html" class="btn-secondary">Contact</a>
-                <a href="#"><img class="header-icon" src="./assets/image/menu.png" alt="Menu pour contact" /></a>
+                <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
+                        alt="Menu pour contact" /></a>
             </div>
         </nav>
     </section>
@@ -115,7 +186,7 @@
                 <p>Pour recevoir nos actualités et mises à jour directement dans votre boîte de réception.</p>
             </div>
             <div class="newsletter-signup">
-                <input type="email" id="email" placeholder="Votre Adresse E-Mail" required/>
+                <input type="email" id="email" placeholder="Votre Adresse E-Mail" required />
                 <button type="submit">S'INSCRIRE</button>
             </div>
         </div>
@@ -123,7 +194,8 @@
         <div class="footer-main">
             <div class="footer-column logo-column">
                 <img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe">
-                <p class="tex">Mahiratra Groupe est un fournisseur de services de conseil informatique et de développement de
+                <p class="tex">Mahiratra Groupe est un fournisseur de services de conseil informatique et de
+                    développement de
                     logiciels.
                     Après avoir débuté en tant que petite entreprise de produits d'IA, nous sommes passés aux services
                     informatiques et depuis,
@@ -185,6 +257,7 @@
             <div class="p">© 2024 Mahiratra Groupe. Tous droits réservés.</div>
         </div>
     </footer>
+    <script src="./assets/js/service_d_application.js"></script>
 </body>
 
 </html>
