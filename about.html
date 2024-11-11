@@ -11,6 +11,21 @@
 
 <body>
 
+    <!-- Section caché de BARRE DE RECHERCHE -->
+    <div id="searchBlock" class="search-block">
+        <div class="divCher">
+            <form action="#" method="POST"></form>
+            <span class="close-btn0" id="closeSearchBtn">&times;</span>
+            <div class="cadreS">
+                <div id="searchBar" class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Rechercher...">
+                    <i class="icon-search">
+                        <img src="./assets/image/chercher.png" alt="search">
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Section Partie caché de barre de contact -->
 
@@ -90,7 +105,7 @@
                 <a href="service.html">Nos services</a>
             </div>
             <div class="centre">
-                <a href="#"><img class="header-icon" src="./assets/image/chercher.png" alt="Icon pour chercher" /></a>
+                <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png" alt="Icon pour chercher" /></a>
                 <a href="contact.html" class="btn-secondary">Contact</a>
                 <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
                         alt="Menu pour contact" /></a>
@@ -173,7 +188,7 @@
                 <p>Pour recevoir nos actualités et mises à jour directement dans votre boîte de réception.</p>
             </div>
             <div class="newsletter-signup">
-                <input type="email" id="email" name="email" placeholder="Votre Adresse E-Mail" required/>
+                <input type="email" id="email" name="email" placeholder="Votre Adresse E-Mail" required />
                 <button type="submit">S'INSCRIRE</button>
             </div>
         </div>

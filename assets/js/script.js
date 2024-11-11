@@ -20,3 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Sélectionner les éléments
+
+// pour la partie barre de recherche
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("here");
+
+
+  const showSearchBtn = document.getElementById("showSearch");
+  const closeSearchBtn = document.getElementById("closeSearchBtn");
+  const searchBlock = document.getElementById("searchBlock");
+  // afficher la barre de recherche
+  showSearchBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    searchBlock.classList.add("show");
+    console.log("clicked");
+  });
+  // cacher la barre de recherche
+  closeSearchBtn.addEventListener("click", () => {
+    searchBlock.classList.remove("show");
+    console.log("clicked");
+  });
+});
