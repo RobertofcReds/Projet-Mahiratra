@@ -11,11 +11,10 @@
     <link href="./assets/font/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
     <link href="./assets/font/fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet" />
     <link href="./assets/font/fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-
     <!-- Section caché de BARRE DE RECHERCHE -->
     <div id="searchBlock" class="search-block">
 
@@ -25,6 +24,7 @@
             <div class="cadreS">
                 <div id="searchBar" class="search-bar">
                     <input type="text" id="searchInput" placeholder="Rechercher...">
+                    <!-- <span class="fas fa-search"></span> -->
                     <i class="icon-search">
                         <img src="./assets/image/chercher.png" alt="search">
                     </i>
@@ -110,8 +110,12 @@
                 <a href="service.html">Nos services</a>
             </div>
             <div class="centre">
-                <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
-                        alt="Icon pour chercher"></a>
+                <div class="espaceX">
+                    <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
+                            alt="Icon pour chercher"></a>
+                    <label for="toggle">☰</label>
+                    <input type="checkbox" id="toggle">
+                </div>
                 <a href="contact.html" target="_blank" class="btn-secondary">Contact</a>
                 <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
                         alt="Menu pour contact"></a>
@@ -168,13 +172,17 @@
                 </div>
                 <div class="btn-primary1"><a href="about.html">En savoir plus</a></div>
             </div>
-            <div class="about-images">
-                <img src="./assets/image/directeur.jpg" alt="Image 1" class="about-image1">
-                <img src="./assets/image/businessman-5791566.jpg" alt="Image 2" class="about-image2">
+            <div class="fleximage">
+                <div class="about-images">
+                    <img src="./assets/image/photo-accueil1.jpg" alt="Image 1" class="about-image1">
+                    <img src="./assets/image/photo-accueil2.jpg" alt="Image 2" class="about-image2">
+                </div>
+                <div>
+                    <button class="btn-more0 more-btn">Donnez du sens à votre entreprise.</button>
+                </div>
             </div>
-
         </div>
-        <button class="btn-more more-btn">Donnez du sens à votre entreprise.</button>
+
     </section>
 
 

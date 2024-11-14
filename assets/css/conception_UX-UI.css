@@ -165,7 +165,7 @@ a:hover {
     background: var(--white);
     z-index: 1000;
     align-items: center;
-    padding: 1rem 2%;
+    padding: 0.5rem 2%;
     box-shadow: var(--box-shadow1);
 }
 
@@ -174,12 +174,11 @@ a:hover {
 }
 
 .header .header-icon {
-    width: 40px;
+    width: 38px;
 }
 
 .header img {
     width: 150px;
-
 }
 
 .navbar {
@@ -189,11 +188,12 @@ a:hover {
 }
 
 .header .navbar a {
-    font-size: 1.5rem;
+    font-size: 20px;
     margin-left: 2rem;
     font-family: kantumruy-med;
     display: inline-block;
     position: relative;
+
 }
 
 .header .navbar a:hover {
@@ -589,6 +589,7 @@ a:hover {
     text-align: center;
     font-family: kantumruy-med;
     line-height: 30px;
+    color: var(--black);
 }
 
 .element-details-texte .part-int {
@@ -605,6 +606,7 @@ a:hover {
     width: 400px;
     line-height: 30px;
     text-align: justify;
+    color: var(--black);
 }
 
 .part-int .cadre-comprend {
@@ -655,6 +657,7 @@ footer {
     background-color: var(--main-color);
     padding: 20px;
     padding-left: 40px;
+    overflow: auto;
 }
 
 .about-footer-text h3 {
@@ -665,6 +668,7 @@ footer {
 .about-footer-text p {
     font-family: kantumruy-reg;
     margin: 10px 0;
+    color: var(--white);
 }
 
 .newsletter-signup {
@@ -679,6 +683,12 @@ footer {
     outline: none;
 }
 
+/* .newsletter-signup input:focus {
+    border: 2px solid var(--main-color);
+    border-color: var(--main-color);
+    transition: 0.5s ease-in-out !important;
+} */
+
 .newsletter-signup button {
     padding: 10px 20px;
     background-color: var(--main-color);
@@ -691,12 +701,21 @@ footer {
 
 .footer-main {
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
+    padding: 40px 20px;
 }
+
+
 
 .footer-column {
     max-width: 300px;
+    margin-left: 20px;
+}
+
+.contact-column,
+.services-column,
+.essentials-column {
+    max-width: 300px;
+    margin-left: 30px;
 }
 
 .footer-column h4 {
@@ -733,7 +752,6 @@ footer {
 .logo-column img {
     margin-bottom: 15px;
     width: 150px;
-
 }
 
 .logo-column p {
@@ -810,4 +828,236 @@ footer {
     font-family: kantumruy-reg;
     display: flex;
     color: #cbcdd1;
+}
+
+/* ##################### LA PARTIE RESPONSIVE ##########################*/
+
+/* BARRE DE NAVIGATION */
+@media (max-width: 1000px) {
+
+    /* Section Header */
+    .header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        z-index: 1000;
+        align-items: center;
+        padding: 0.5rem 2%;
+        box-shadow: var(--box-shadow1);
+    }
+
+    .couleur {
+        color: var(--main-color);
+    }
+
+    .header .header-icon {
+        width: 35px;
+    }
+
+    .header img {
+        width: 100px;
+        margin-left: -25px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .navbar a {
+        font-size: 20px;
+        margin-left: 2rem;
+        font-family: kantumruy-med;
+        display: inline-block;
+        position: relative;
+
+    }
+
+    .header .navbar a:hover {
+        color: var(--main-color);
+    }
+
+    .header .navbar .scale a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        background: var(--main-color);
+        transition: transform 0.5s ease-out;
+    }
+
+    .header .navbar .scale a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .header .navbar .scale,
+    .header .navbar .centre .btn-secondary,
+    #showContact {
+        display: none;
+    }
+
+    .centre {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-secondary {
+        color: var(--white);
+        padding: 8px;
+        background-color: var(--main-color);
+        border-radius: 15px 0;
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--white);
+        border-radius: 0 15px;
+        transition: 500ms;
+        border: 1.5px solid var(--main-color);
+    }
+}
+
+/* FOOTER */
+@media (max-width: 932px) {
+
+    /* Footer */
+    .footer-top {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--main-color);
+        padding: 20px;
+        padding-left: 40px;
+        overflow: auto;
+    }
+
+    .footer-main {
+        display: grid;
+        padding: 40px 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-column {
+        max-width: 400px;
+    }
+
+    .services-column {
+        max-width: 300px;
+        margin-left: 20px;
+    }
+
+    .contact-column,
+    .company-column,
+    .essentials-column {
+        max-width: 300px;
+        margin-left: 50px;
+    }
+
+    .footer-column h4 {
+        font-weight: medium;
+        padding-bottom: 10px;
+    }
+
+    .footer-column h5 {
+        font-weight: normal;
+        font-size: medium;
+        text-decoration: underline;
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+        line-height: 30px;
+    }
+
+    .footer-column ul li a {
+        color: #cbcdd1;
+        text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .logo-column img {
+        margin-bottom: 15px;
+        width: 150px;
+    }
+
+    .logo-column p {
+        line-height: 25px;
+        font-family: kantumruy-reg;
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #cbcdd1;
+    }
+
+    .logo-column a {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+
+    .logo-column a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-column p {
+        line-height: 30px;
+        font-family: kantumruy-reg;
+        color: #cbcdd1;
+    }
+
+    .contact-column p a {
+        color: var(--white);
+    }
+
+    .contact-column p a:hover {
+        text-decoration: underline;
+        color: var(--main-color);
+    }
+}
+
+@media (max-width: 720px) {
+
+    /* Footer */
+    .footer-main {
+        display: grid;
+        padding: 40px 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-column {
+        margin-left: 50px;
+    }
+
+    .company-column,
+    .essentials-column {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Footer */
+    .footer-main {
+        display: grid;
+        padding: 40px 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-column {
+        max-width: 400px;
+        margin-left: 20px;
+    }
 }
