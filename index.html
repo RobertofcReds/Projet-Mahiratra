@@ -34,7 +34,6 @@
     </div>
 
     <!-- Section Partie caché de barre de contact -->
-
     <div id="contactBlock" class="contact-block">
         <div class="divBody">
             <form action="#" method="POST"></form>
@@ -103,22 +102,27 @@
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
-            <a href="#"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
+            <span class="toggle"><i class="fa-solid fa-bars" id="toggle"></i></span>
+            <a href="#"><img class="logo" src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
             <div class="scale">
                 <a href="#" class="couleur">Accueil</a>
                 <a href="about.html">À propos de nous</a>
                 <a href="service.html">Nos services</a>
+                <a href="contact.html" class="mobile">Contact</a>
             </div>
             <div class="centre">
                 <div class="espaceX">
-                    <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
-                            alt="Icon pour chercher"></a>
-                    <label for="toggle">☰</label>
-                    <input type="checkbox" id="toggle">
+                    <span class="search-icon" id="showSearch"><i class="fa-solid fa-search"></i></span>
+                    <!-- <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
+                            alt="Icon pour chercher"></a> -->
                 </div>
-                <a href="contact.html" target="_blank" class="btn-secondary">Contact</a>
-                <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
-                        alt="Menu pour contact"></a>
+                <a href="contact.html" target="_blank" class="btn-secondary contact-btn">Contact</a>
+                <div class="espaceX">
+                    <span class="m-contact-icon" id="showContact"><i class="fa-solid fa-border-all"
+                            style="margin-left: 30px; margin-right: 10px;"></i></span>
+                </div>
+                <!-- <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
+                        alt="Menu pour contact"></a> -->
             </div>
         </nav>
     </section>

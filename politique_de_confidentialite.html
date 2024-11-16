@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./assets/css/politique_de_confidentialite.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de confidentialité</title>
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet" />
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -97,18 +102,27 @@
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
-            <a href="index.html"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
+            <span class="toggle"><i class="fa-solid fa-bars" id="toggle"></i></span>
+            <a href="#"><img class="logo" src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
             <div class="scale">
                 <a href="index.html">Accueil</a>
                 <a href="about.html">À propos de nous</a>
                 <a href="service.html">Nos services</a>
+                <a href="contact.html" class="mobile">Contact</a>
             </div>
             <div class="centre">
-                <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
-                        alt="Icon pour chercher"></a>
-                <a href="contact.html" class="btn-secondary">Contact</a>
-                <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
-                        alt="Menu pour contact"></a>
+                <div class="espaceX">
+                    <span class="search-icon" id="showSearch"><i class="fa-solid fa-search"></i></span>
+                    <!-- <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
+                            alt="Icon pour chercher"></a> -->
+                </div>
+                <a href="contact.html" class="btn-secondary contact-btn">Contact</a>
+                <div class="espaceX">
+                    <span class="m-contact-icon" id="showContact"><i class="fa-solid fa-border-all"
+                            style="margin-left: 30px; margin-right: 10px;"></i></span>
+                </div>
+                <!-- <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
+                        alt="Menu pour contact"></a> -->
             </div>
         </nav>
     </section>
@@ -145,9 +159,12 @@
                 <p><span>Texte suggéré :</span> Si vous déposez un commentaire sur notre site, vous aurez la possibilité
                     d'enregistrer votre nom, votre adresse e-mail et votre site web dans des cookies. Ces cookies sont
                     uniquement destinés à votre confort afin de ne pas avoir à saisir à nouveau ces informations lorsque
-                    vous déposez un autre commentaire. Ces cookies expirent au bout d'un an. Si vous visitez notre page de
-                    connexion, nous installerons un cookie temporaire afin de déterminer si votre navigateur accepte les cookies.
-                    Ce cookie ne contient aucune donnée personnelle et sera supprimé lorsque vous fermerez votre navigateur.
+                    vous déposez un autre commentaire. Ces cookies expirent au bout d'un an. Si vous visitez notre page
+                    de
+                    connexion, nous installerons un cookie temporaire afin de déterminer si votre navigateur accepte les
+                    cookies.
+                    Ce cookie ne contient aucune donnée personnelle et sera supprimé lorsque vous fermerez votre
+                    navigateur.
 
                     Lorsque vous vous connectez, nous mettons en place un certain nombre de cookies pour enregistrer vos
                     informations de connexion et vos préférences d'affichage à l'écran. La durée de vie d'un cookie de
@@ -177,16 +194,20 @@
 
                     Pour les utilisateurs qui s'inscrivent sur notre site Web (le cas échéant), nous stockons également
                     les informations personnelles qu'ils fournissent dans leur profil d'utilisateur. Tous les
-                    utilisateurs peuvent voir, modifier ou supprimer leurs informations personnelles à tout moment (à l'exception de
-                    leur nom d'utilisateur). Les administrateurs du site Web peuvent également voir et modifier ces informations.
+                    utilisateurs peuvent voir, modifier ou supprimer leurs informations personnelles à tout moment (à
+                    l'exception de
+                    leur nom d'utilisateur). Les administrateurs du site Web peuvent également voir et modifier ces
+                    informations.
                 </p>
             </div>
             <div class="text-politique">
                 <p class="titre-politique">Quels droits avez-vous sur vos données</p>
                 <p><span>Texte suggéré :</span>Si vous avez un compte sur ce site ou si vous avez laissé des
                     commentaires, vous pouvez demander à recevoir un fichier contenant toutes les données personnelles
-                    que nous possédons à votre sujet, y compris celles que vous nous avez fournies. Vous pouvez également demander la
-                    suppression des données personnelles que nous possédons à votre sujet. Cela ne prend pas en compte les données
+                    que nous possédons à votre sujet, y compris celles que vous nous avez fournies. Vous pouvez
+                    également demander la
+                    suppression des données personnelles que nous possédons à votre sujet. Cela ne prend pas en compte
+                    les données
                     que nous sommes obligés de conserver à des fins administratives, légales ou de sécurité.</p>
             </div>
             <div class="text-politique">

@@ -1,3 +1,8 @@
+document.getElementById('toggle').addEventListener('click', function () {
+    document.querySelector('.navbar').classList.toggle('active');
+  });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Notre code JavaScript ici
     console.log("here");

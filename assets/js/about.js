@@ -1,3 +1,7 @@
+document.getElementById('toggle').addEventListener('click', function () {
+  document.querySelector('.navbar').classList.toggle('active');
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Notre code JavaScript ici
     console.log("here");
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Sélectionner les éléments
 
-  // pour la partie barre de recherche
+  // pour la partie barre de recherches
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("here");

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-    
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/conception_UX-UI.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conception UX/UI</title>
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/brands.css" rel="stylesheet" />
+    <link href="./assets/font/fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -97,20 +102,31 @@
     <!--Section Header-->
     <section class="header">
         <nav class="navbar">
-            <a href="index.html"><img src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
+            <span class="toggle"><i class="fa-solid fa-bars" id="toggle"></i></span>
+            <a href="#"><img class="logo" src="./assets/image/Mahiratra.jpg" alt="Logo Mahiratra Groupe"></a>
             <div class="scale">
                 <a href="index.html">Accueil</a>
                 <a href="about.html">À propos de nous</a>
                 <a href="service.html">Nos services</a>
+                <a href="contact.html" class="mobile">Contact</a>
             </div>
             <div class="centre">
-                <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png" alt="Icon pour chercher"></a>
-                <a href="contact.html" class="btn-secondary">Contact</a>
-                <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
-                        alt="Menu pour contact"></a>
+                <div class="espaceX">
+                    <span class="search-icon" id="showSearch"><i class="fa-solid fa-search"></i></span>
+                    <!-- <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
+                            alt="Icon pour chercher"></a> -->
+                </div>
+                <a href="contact.html" class="btn-secondary contact-btn">Contact</a>
+                <div class="espaceX">
+                    <span class="m-contact-icon" id="showContact"><i class="fa-solid fa-border-all"
+                            style="margin-left: 30px; margin-right: 10px;"></i></span>
+                </div>
+                <!-- <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
+                        alt="Menu pour contact"></a> -->
             </div>
         </nav>
     </section>
+
 
     <!--Section Hero (Example Section) -->
     <section class="hero">
