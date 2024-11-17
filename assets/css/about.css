@@ -481,9 +481,10 @@ a:hover {
 
 .btn-secondary {
     color: var(--white);
-    padding: 8px;
+    padding: 6px;
     background-color: var(--main-color);
     border-radius: 15px 0;
+    border: 1.5px solid var(--main-color);
 }
 
 .btn-secondary:hover {
@@ -814,7 +815,7 @@ footer {
 }
 
 .footer-column h4 {
-    font-weight: medium;
+    font-weight: normal;
     padding-bottom: 10px;
 }
 
@@ -1409,9 +1410,10 @@ footer {
 
     .btn-secondary {
         color: var(--white);
-        padding: 8px;
+        padding: 6px;
         background-color: var(--main-color);
         border-radius: 15px 0;
+        border: 1.5px solid var(--main-color);
     }
 
     .btn-secondary:hover {
