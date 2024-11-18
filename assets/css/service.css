@@ -1840,6 +1840,69 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .text-about .sa-couleur0 {
+        color: var(--main-color);
+        font-family: kantumruy-bold;
+        font-size: 25px;
+    }
+
+    .titre-service p {
+        font-size: 25px;
+    }
+
+    .content p {
+        display: flex;
+        margin-top: 5px;
+        justify-content: center;
+        color: var(--black);
+        margin-bottom: 10px;
+    }
+
+    .content .btn-primary {
+        padding: 10px;
+        background-color: var(--main-color);
+        color: white;
+        border-radius: 20px;
+        font-size: 12px;
+        margin: 0px 36px;
+        border: none;
+        cursor: pointer;
+        font-family: kantumruy-med;
+    }
+
+    .service3 h2 {
+        font-family: kantumruy-bold;
+        font-size: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .subtitle1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 22px;
+        color: var(--black);
+    }
+
+    .alignement .autre {
+        font-family: kantumruy-reg;
+        font-size: 16px;
+        padding: 0;
+        text-align: center;
+        color: var(--black);
+    }
+
+    .cadre0 .cadre {
+        background-color: var(--white);
+        border-radius: 10px;
+        box-shadow: 2px 2px rgb(201, 201, 201);
+        width: 275px;
+        height: auto;
+        padding: 15px;
+    }
+}
+
 /* FOOTER */
 @media (max-width: 932px) {
 
