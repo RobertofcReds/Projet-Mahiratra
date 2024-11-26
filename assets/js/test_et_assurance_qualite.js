@@ -1,6 +1,11 @@
-document.getElementById('toggle').addEventListener('click', function () {
-    document.querySelector('.navbar').classList.toggle('active');
-  });
+// Bouton menu navigation
+const menubtn = document.querySelector('#toggle');
+const navbar = document.querySelector('.header .navbar');
+
+menubtn.addEventListener('click', ()=>{
+  navbar.classList.toggle('active');
+  menubtn.classList.toggle('fa-times');
+})
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1302,6 +1302,17 @@ footer {
         font-size: 2rem;
         margin-left: 10px;
         cursor: pointer;
+        transition: .2s linear;
+    }
+
+    .toggle,
+    #toggle:hover {
+        width: 38px;
+    }
+    
+    #toggle.fa-times {
+        width: 27px;
+        transform: rotate(180deg);
     }
 
     .header .navbar .toggle {
@@ -1382,22 +1393,21 @@ footer {
         display: block;
         position: absolute;
         top: 63px;
-        left: -100%;
+        left: 0%;
         background-color: var(--white);
         border: 1px solid #098bbb;
         padding: 10px;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 1s ease-out;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        
     }
 
     .active .scale {
-        left: 0;
-        transform: scale(1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: .5s linear;
     }
 
     .header .navbar .centre .btn-secondary,
@@ -1925,7 +1935,7 @@ footer {
     }
 
     .footer-column h4 {
-        font-weight: medium;
+        font-weight: normal;
         padding-bottom: 10px;
     }
 
