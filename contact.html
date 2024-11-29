@@ -149,41 +149,43 @@
 
 
     <section class="body-contact">
-        <div class="contact-form">
-            <form action="#" method="POST">
-                <div class="cadra">
+        <div class="corp">
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="cadra">
 
-                    <div class="form-group">
-                        <label for="name">VOTRE NOM</label>
-                        <input type="text" id="name" name="name" placeholder="Entrez Votre Nom" required>
-                        <i class="icon-user">
-                            <img src="./assets/image/votre nom.PNG" alt="name">
-                        </i>
+                        <div class="form-group">
+                            <label for="name">VOTRE NOM</label>
+                            <input type="text" id="name" name="name" placeholder="Entrez Votre Nom" required>
+                            <i class="icon-user">
+                                <img src="./assets/image/votre nom.PNG" alt="name">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">VOTRE EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Entrez Votre Email" required>
+                            <i class="icon-email">
+                                <img src="./assets/image/votr email.PNG" alt="email">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">SUJET</label>
+                            <input type="text" id="subject" name="subject" placeholder="Entrez Votre Sujet" required>
+                            <i class="icon-folder">
+                                <img src="./assets/image/votre sujet.PNG" alt="subject">
+                            </i>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">VOTRE MESSAGE (OPTIONNEL)</label>
+                            <textarea id="message" name="message" placeholder="Entrez Votre Message"></textarea>
+                            <i class="icon-message">
+                                <img src="./assets/image/votre message.PNG" alt="message">
+                            </i>
+                        </div>
+                        <button type="submit">SOUMETTRE</button>
                     </div>
-                    <div class="form-group">
-                        <label for="email">VOTRE EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder="Entrez Votre Email" required>
-                        <i class="icon-email">
-                            <img src="./assets/image/votr email.PNG" alt="email">
-                        </i>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">SUJET</label>
-                        <input type="text" id="subject" name="subject" placeholder="Entrez Votre Sujet" required>
-                        <i class="icon-folder">
-                            <img src="./assets/image/votre sujet.PNG" alt="subject">
-                        </i>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">VOTRE MESSAGE (OPTIONNEL)</label>
-                        <textarea id="message" name="message" placeholder="Entrez Votre Message"></textarea>
-                        <i class="icon-message">
-                            <img src="./assets/image/votre message.PNG" alt="message">
-                        </i>
-                    </div>
-                    <button type="submit">SOUMETTRE</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
         <div class="coordonne">
             <div class="corp-cordonne">
@@ -197,7 +199,7 @@
                     est urgente, veuillez utiliser les coordonnées ci-dessous.</p>
                 <div class="gap">
                     <div class="cadreA">
-                        <img src="./assets/image/adresse.PNG" alt="adresse">
+                        <div class="ordre"><i class="fa-solid fa-location-dot" id="icon-adresse"></i></div>
                         <div class="grid">
                             <p class="titra-adresse">Adresse</p>
                             <p class="texte-adresse" style="line-height: 30px;">Lot: k16 , rue de Tananarive , Tanambao
@@ -207,7 +209,7 @@
                     </div>
 
                     <div class="cadreA">
-                        <img src="./assets/image/demandes generale.PNG" alt="demande">
+                        <div class="ordre1"><i class="fa-solid fa-phone-volume" id="icon-demande"></i></div>
                         <div class="grid">
                             <p class="titra-adresse">Demandes générales</p>
                             <p class="texte-adresse">Courriel : mahiratragroupe@gmail.com</p>
@@ -215,7 +217,7 @@
                     </div>
 
                     <div class="cadreA">
-                        <img src="./assets/image/heure d'ouverture.PNG" alt="heure">
+                        <div class="ordre1"><i class="fa-solid fa-clock" id="icon-heure"></i></div>
                         <div class="grid">
                             <p class="titra-adresse">Heures d'ouverture</p>
                             <p class="texte-adresse">Service client 24h/24 et 7j/7</p>
