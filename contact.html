@@ -151,7 +151,7 @@
     <section class="body-contact">
         <div class="corp">
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form id="contact-form" action="http://localhost:3000/contact" method="POST">
                     <div class="cadra">
 
                         <div class="form-group">
@@ -185,6 +185,11 @@
                         <button type="submit">SOUMETTRE</button>
                     </div>
                 </form>
+                <!-- Conteneur pour afficher le message de notification -->
+                <div id="notification" class="hidden">
+                    <p id="notification-message"></p>
+                    <button id="close-notification">OK</button>
+                </div>
             </div>
         </div>
         <div class="coordonne">
