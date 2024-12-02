@@ -91,6 +91,8 @@ form.addEventListener('submit', async (event) => {
         notification.classList.remove('hidden');
         notification.style.display = 'block';
     }
+    // Réinitialise les champs du formulaire
+    form.reset(); // Cette méthode vide tous les champs du formulaire
 });
 
 // Ferme la notification lorsqu'on clique sur "OK"
