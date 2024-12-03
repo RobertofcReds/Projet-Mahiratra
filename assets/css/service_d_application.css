@@ -299,36 +299,10 @@ a:hover {
 
 .form-group i {
     position: absolute;
-    right: 10px;
-    top: 31px;
+    font-size: 19px;
+    left: 98%;
+    top: 17px;
     color: var(--main-color);
-}
-
-.icon-user img {
-    width: 27px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-email img {
-    padding-top: 3px;
-    width: 27px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-folder img {
-    padding-top: 3px;
-    width: 27px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-message img {
-    padding-top: 3px;
-    width: 30px;
-    height: auto;
-    position: absolute;
 }
 
 .contact-form button {
@@ -1291,36 +1265,10 @@ footer {
 
     .form-group i {
         position: absolute;
-        right: 45px;
-        top: 24px;
+        font-size: 16px;
+        left: 84%;
+        top: 13px;
         color: var(--main-color);
-    }
-
-    .icon-user img {
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-email img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-folder img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-message img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
     }
 
     .contact-form button {

@@ -287,16 +287,16 @@ a:hover {
 
 .divBody {
     display: flex;
-    width: 1000px;
+    width: 54rem;
     position: relative;
-    height: 650px;
+    height: 36rem;
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     align-items: center;
-    border: 2px solid var(--main-color);
+    border: 1.5px solid var(--main-color);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     background-color: var(--white);
 }
 
@@ -314,8 +314,8 @@ a:hover {
 }
 
 .imagg img {
-    width: 200px;
-    height: 74px;
+    width: 12rem;
+    height: 4.3rem;
 }
 
 .imagg p {
@@ -334,12 +334,13 @@ a:hover {
 }
 
 .tex-details p.p1 {
+    color: var(--black);
     font-family: kantumruy-reg;
-    font-size: 20px;
-    line-height: 30px;
-    padding-top: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 30px;
     padding-right: 20px;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .tex-details p.p1 span {
@@ -353,14 +354,17 @@ a:hover {
 }
 
 .tex-details p.p2 {
-    padding-left: 30px;
-    padding-top: 30px;
+    color: var(--black);
+    padding-left: 20px;
+    padding-top: 5px;
     cursor: pointer;
 }
 
 .tex-details p.p3 {
-    padding-left: 30px;
-    padding-top: 30px;
+    color: var(--black);
+    font-size: 17px;
+    padding-left: 20px;
+    padding-top: 5px;
     font-family: kantumruy-med;
 }
 
@@ -418,12 +422,13 @@ a:hover {
 
 .form-group i {
     position: absolute;
-    right: 10px;
-    top: 35px;
+    font-size: 19px;
+    left: 98%;
+    top: 20px;
     color: var(--main-color);
 }
 
-.icon-user img {
+/* .icon-user img {
     width: 30px;
     height: auto;
     position: absolute;
@@ -448,7 +453,7 @@ a:hover {
     width: 30px;
     height: auto;
     position: absolute;
-}
+} */
 
 .contact-form button {
     width: 40%;
@@ -468,13 +473,16 @@ a:hover {
 #notification {
     margin-top: 20px;
     padding: 15px;
-    background-color: #dff0d8; /* Vert clair */
-    color: #3c763d; /* Vert foncé */
+    background-color: #dff0d8;
+    /* Vert clair */
+    color: #3c763d;
+    /* Vert foncé */
     border: 1px solid #d6e9c6;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
-    display: none; /* Par défaut, caché */
+    display: none;
+    /* Par défaut, caché */
     position: relative;
 }
 
@@ -656,12 +664,13 @@ a:hover {
 
 .form-group i {
     position: absolute;
-    right: 10px;
-    top: 35px;
+    font-size: 19px;
+    left: 98%;
+    top: 20px;
     color: var(--main-color);
 }
 
-.icon-user img {
+/* .icon-user img {
     width: 30px;
     height: auto;
     position: absolute;
@@ -686,7 +695,7 @@ a:hover {
     width: 30px;
     height: auto;
     position: absolute;
-}
+} */
 
 .body-contact button {
     width: 40%;
@@ -1209,36 +1218,10 @@ footer {
 
     .form-group i {
         position: absolute;
-        right: 45px;
-        top: 24px;
+        font-size: 16px;
+        left: 84%;
+        top: 13px;
         color: var(--main-color);
-    }
-
-    .icon-user img {
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-email img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-folder img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
-    }
-
-    .icon-message img {
-        padding-top: 3px;
-        width: 23px;
-        height: auto;
-        position: absolute;
     }
 
     .contact-form button {
@@ -1767,8 +1750,9 @@ footer {
 
     .form-group i {
         position: absolute;
-        right: 45px;
-        top: 24px;
+        font-size: 16px;
+        left: 84%;
+        top: 13px;
         color: var(--main-color);
     }
 
