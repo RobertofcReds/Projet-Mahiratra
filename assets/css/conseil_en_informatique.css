@@ -845,7 +845,6 @@ footer {
 
 .about-footer-text h3 {
     font-size: 24px;
-    font-weight: medium;
 }
 
 .about-footer-text p {
@@ -879,7 +878,6 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 3px;
-    font-weight: medium;
 }
 
 .footer-main {

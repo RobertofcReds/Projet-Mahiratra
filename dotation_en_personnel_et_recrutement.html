@@ -302,8 +302,11 @@
                 <p>Pour recevoir nos actualités et mises à jour directement dans votre boîte de réception.</p>
             </div>
             <div class="newsletter-signup">
-                <input type="email" id="email" placeholder="Votre Adresse E-Mail" required />
-                <button type="submit">S'INSCRIRE</button>
+                <form id="subscribeForm">
+                    <input type="email" id="emaile" placeholder="Votre Adresse E-Mail" required />
+                    <button type="submit">S'INSCRIRE</button>
+                </form>
+                <p id="responseMessage"></p>
             </div>
         </div>
 
@@ -374,6 +377,7 @@
         </div>
     </footer>
     <script src="./assets/js/dotation_en_personnel_et_recrutement.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

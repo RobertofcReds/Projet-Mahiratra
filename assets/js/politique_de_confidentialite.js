@@ -2,9 +2,9 @@
 const menubtn = document.querySelector('#toggle');
 const navbar = document.querySelector('.header .navbar');
 
-menubtn.addEventListener('click', ()=>{
-  navbar.classList.toggle('active');
-  menubtn.classList.toggle('fa-times');
+menubtn.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    menubtn.classList.toggle('fa-times');
 })
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,4 +50,48 @@ document.addEventListener("DOMContentLoaded", function () {
         searchBlock.classList.remove("show");
         console.log("clicked");
     });
+});
+
+
+
+document.getElementById('subscribeForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const email = document.getElementById('emaile').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Inscription réussie !',
+                text: result.message,
+            });
+
+            // Réinitialiser le champ email après inscription
+            document.getElementById('emaile').value = '';
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erreur',
+                text: result.message,
+            });
+        }
+    } catch (error) {
+        console.error('Erreur :', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Erreur',
+            text: 'Une erreur s\'est produite, veuillez réessayer plus tard.',
+        });
+    }
 });
