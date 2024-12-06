@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import cron from 'node-cron';
+import ExcelJS from 'exceljs'
 
 
 // Initialisation de l'application Express
@@ -65,7 +66,7 @@ const transporter = nodemailer.createTransport({
 
 // Planifiez la tâche
 
-cron.schedule('* * * * *', () => {
+cron.schedule('0 8 * * *', () => {
     console.log('Test de l\'envoi automatique d\'emails...');
 
     // Requête pour récupérer les emails des abonnés
@@ -141,6 +142,55 @@ app.post('/subscribe', (req, res) => {
     });
 });
 
+// Route pour récupérer les messages enregistrés dans la base de données
+app.get('/messages', (req, res) => {
+    db.query('SELECT * FROM messages', (err, results) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Erreur serveur.' });
+        } else {
+            res.json(results);
+        }
+    });
+});
+
+
+app.get('/export/messages', (req, res) => {
+    db.query('SELECT * FROM messages', async (err, results) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Erreur lors de la récupération des messages.' });
+        } else {
+            try {
+                // Crée un nouveau classeur Excel
+                const workbook = new ExcelJS.Workbook();
+                const worksheet = workbook.addWorksheet('Messages');
+
+                // Ajoute les colonnes
+                worksheet.columns = [
+                    { header: 'ID', key: 'id', width: 10 },
+                    { header: 'Nom', key: 'name', width: 25 },
+                    { header: 'Email', key: 'email', width: 30 },
+                    { header: 'Sujet', key: 'subject', width: 30 },
+                    { header: 'Message', key: 'message', width: 50 }
+                ];
+
+                // Ajoute les lignes (les données de la base de données)
+                results.forEach(message => worksheet.addRow(message));
+
+                // Envoye le fichier Excel au client
+                res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+                res.setHeader('Content-Disposition', 'attachment; filename="messages.xlsx"');
+
+                await workbook.xlsx.write(res);
+                res.end();
+            } catch (err) {
+                console.error(err);
+                res.status(500).json({ message: 'Erreur lors de la génération du fichier Excel.' });
+            }
+        }
+    });
+});
 
 // Lance le serveur
 app.listen(PORT, () => {
