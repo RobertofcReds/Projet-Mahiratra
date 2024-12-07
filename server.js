@@ -5,7 +5,23 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import cron from 'node-cron';
-import ExcelJS from 'exceljs'
+import ExcelJS from 'exceljs';
+import validator from 'validator';
+import xssClean from 'xss-clean';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+
+import dotenv from 'dotenv';
+dotenv.config({ path: './production.env' });
+
+// Ici nous pouvons vérifier la valeur de NODE_ENV :
+console.log('Environnement actuel :', process.env.NODE_ENV);
+
+// Pour tester si Node-Env est bien défini
+console.log('NODE_ENV :', process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'production') {
+    console.log('Mode production activé !');
+}
 
 
 // Initialisation de l'application Express
@@ -18,9 +34,21 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(xssClean()); //Protection contre les attaques XSS
+app.use(helmet()); //Ajout des headers de securité
+
+// Limite pour les requêtes
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limite chaque IP à 100 requêtes par 15 minutes
+    message: "Trop de requêtes, veuillez réessayer plus tard.",
+});
+
+app.use(limiter);
+
 // Configure la connexion à la base de données MySQL
 const db = mysql.createConnection({
-    host: 'localhost', // Adresse de ton serveur MySQL
+    host: 'localhost', // Adresse de mon serveur MySQL
     user: 'root',      // Nom d'utilisateur MySQL (par défaut : root)
     password: '',      // Mot de passe (on laisse vide si aucun mot de passe)
     database: 'mahiratra', // Nom de la base de données que j'ai créé
@@ -36,10 +64,10 @@ db.connect((err) => {
 });
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // Utilisez votre service email (Gmail, Outlook, etc.)
+    service: 'gmail', // J'utilise mon service email (Gmail, Outlook, etc.)
     auth: {
-        user: 'judicaelroberto@gmail.com', // Remplacez par votre email
-        pass: 'xogoqzctzpikyhbi' // Remplacez par votre mot de passe
+        user: 'judicaelroberto@gmail.com', // Je remplace par mon email
+        pass: 'xogoqzctzpikyhbi' // Je remplace par mon mot de passe
     }
 });
 
@@ -108,6 +136,10 @@ app.post('/contact', (req, res) => {
         return res.status(400).send('Tous les champs sont obligatoires.');
     }
 
+    if (!validator.isEmail(email)) {
+        return res.status(400).send("Adresse email invalide !");
+    }
+
     // Insére les données dans la base de données
     const query = 'INSERT INTO messages (name, email, subject, message) VALUES (?, ?, ?, ?)';
     db.query(query, [name, email, subject, message], (err, result) => {
@@ -127,6 +159,10 @@ app.post('/subscribe', (req, res) => {
     // Vérification si l'email est fourni
     if (!email) {
         return res.status(400).json({ message: "Veuillez entrer une adresse e-mail valide." });
+    }
+
+    if (!validator.isEmail(email)) {
+        return res.status(400).send("Adresse email invalide !");
     }
 
     // Insére l'email dans la base de données
