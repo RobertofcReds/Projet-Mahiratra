@@ -18,20 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeContactBtn = document.getElementById("closeContactBtn");
   const contactBlock = document.getElementById("contactBlock");
 
-  // Afficher le bloc contact
+  // Affiche le bloc contact
   showContactBtn.addEventListener("click", (event) => {
     event.preventDefault();
     contactBlock.classList.add("show");
     console.log("clicked");
   });
 
-  // Cacher le bloc contact
+  // Cache le bloc contact
   closeContactBtn.addEventListener("click", () => {
     contactBlock.classList.remove("show");
     console.log("clicked");
   });
 });
-// Sélectionner les éléments
+// Sélectionne les éléments
 
 // pour la partie barre de recherche
 
@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const showSearchBtn = document.getElementById("showSearch");
   const closeSearchBtn = document.getElementById("closeSearchBtn");
   const searchBlock = document.getElementById("searchBlock");
-  // afficher la barre de recherche
+  // affiche la barre de recherche
   showSearchBtn.addEventListener("click", (event) => {
     event.preventDefault();
     searchBlock.classList.add("show");
     console.log("clicked");
   });
-  // cacher la barre de recherche
+  // cache la barre de recherche
   closeSearchBtn.addEventListener("click", () => {
     searchBlock.classList.remove("show");
     console.log("clicked");
@@ -82,7 +82,7 @@ function moveSlider(index) {
   currentIndex = index;
 }
 
-// Réinitialiser pour un effet infini
+// Réinitialise pour un effet infini
 function resetSlider() {
   if (currentIndex === 0) {
     slider.style.transition = 'none'; // Désactiver la transition
@@ -115,7 +115,7 @@ function startAutoSlide() {
   }
 }
 
-// Arrêter le défilement automatique
+// Arrête le défilement automatique
 function stopAutoSlide() {
   clearInterval(autoSlideInterval);
   autoSlideInterval = null;
@@ -134,10 +134,10 @@ prevButton.addEventListener('click', () => {
   startAutoSlide();
 });
 
-// Réinitialiser la position après chaque transition
+// Réinitialise la position après chaque transition
 slider.addEventListener('transitionend', resetSlider);
 
-// Gérer la visibilité de l'onglet pour arrêter/reprendre l'animation
+// Gére la visibilité de l'onglet pour arrêter/reprendre l'animation
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     stopAutoSlide();
@@ -146,17 +146,42 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
-// Gérer le redimensionnement de l'écran
+// Gére le redimensionnement de l'écran
 window.addEventListener('resize', () => {
-  // Recalculer la largeur des slides
+  // Recalcule la largeur des slides
   slideWidth = slides[0].clientWidth;
 
-  // Réaligner le slider à la position correcte
+  // Réaligne le slider à la position correcte
   updateSliderPosition();
 });
 
 // Initialisation
 startAutoSlide();
+
+//  gére l'ouverture et la fermeture du modal
+document.addEventListener("DOMContentLoaded", () => {
+  const callTrigger = document.getElementById("callTrigger");
+  const appSelector = document.getElementById("appSelector");
+  const closeSelector = document.getElementById("closeSelector");
+
+  // Ouvre le modal au clic sur l'icône d'appel
+  callTrigger.addEventListener("click", (event) => {
+    event.preventDefault(); // Empêche le comportement par défaut
+    appSelector.style.display = "flex";
+  });
+
+  // Ferme le modal au clic sur le bouton Annuler
+  closeSelector.addEventListener("click", () => {
+    appSelector.style.display = "none";
+  });
+
+  // Ferme le modal si on clique en dehors de son contenu
+  window.addEventListener("click", (event) => {
+    if (event.target === appSelector) {
+      appSelector.style.display = "none";
+    }
+  });
+});
 
 
 
@@ -183,7 +208,7 @@ document.getElementById('subscribeForm').addEventListener('submit', async functi
         text: result.message,
       });
 
-      // Réinitialiser le champ email après inscription
+      // Réinitialise le champ email après inscription
       document.getElementById('emaile').value = '';
     } else {
       Swal.fire({

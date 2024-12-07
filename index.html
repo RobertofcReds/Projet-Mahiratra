@@ -278,10 +278,29 @@
         </div>
         <div class="bloc-appelez">
             <div class="info-appel">
-                <a href="#"><i class="fa-solid fa-phone-volume" id="appel"></i></a>
+                <a href="#" id="callTrigger"><i class="fa-solid fa-phone-volume" id="appel"></i></a>
                 <p>Appelez pour une
                     consultation
                     gratuite</p>
+            </div>
+        </div>
+        <!-- Modal pour choisir l'application -->
+        <div id="appSelector" class="modal">
+            <div class="modal-content">
+                <h3>Choisissez une application :</h3>
+                <ul>
+                    <li><a href="https://wa.me/+261328356623" target="_blank">WhatsApp</a></li>
+                    <li><a href="skype:+261328356623?call">Skype</a></li>
+                    <li><a href="tel:+261328356623">Téléphone</a></li>
+                    <li><a href="https://m.me/Mahiratra_Groupe_ID" target="_blank">Messenger</a></li>
+                    <li><a href="https://zoom.us/j/Mahiratra_Groupe_ID_reunion_Zoom" target="_blank">Zoom</a></li>
+                    <li><a href="https://meet.google.com/Mahiratra_Groupe_LIEN_de_réunion_Meet" target="_blank">Google
+                            Meet</a></li>
+                    <li><a href="https://teams.microsoft.com/l/meetup-join/Mahiratra_Groupe_LIEN_Teams"
+                            target="_blank">Microsoft
+                            Teams</a></li>
+                </ul>
+                <button id="closeSelector">Annuler</button>
             </div>
         </div>
     </section>
