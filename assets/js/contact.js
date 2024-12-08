@@ -52,8 +52,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const myForm = document.getElementById('contact-forme');
+const overlaye = document.getElementById('notificatione-overlay');
+const notificationeMessage = document.getElementById('notificatione-message');
+const closeNotificatione = document.getElementById('close-notificatione');
+
+myForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    // Récupère les données du formulaire
+    const formData = new FormData(myForm);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+        // Envoie les données au serveur
+        const response = await fetch('http://localhost:3000/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            // Affiche un message de succès
+            notificationeMessage.textContent = 'Message envoyé avec succès !';
+            overlaye.classList.remove('hidden');
+            overlaye.style.display = 'flex';
+        } else {
+            // Affiche un message d'erreur
+            notificationeMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+            overlaye.classList.remove('hidden');
+            overlaye.style.display = 'flex';
+        }
+    } catch (error) {
+        // Affiche un message d'erreur si le serveur n'est pas accessible
+        notificationeMessage.textContent = 'Erreur réseau. Veuillez vérifier votre connexion.';
+        overlaye.classList.remove('hidden');
+        overlaye.style.display = 'flex';
+    }
+    // Réinitialise les champs du formulaire
+    myForm.reset(); // Cette méthode vide tous les champs du formulaire
+});
+
+// Fermer la notificatione lorsqu'on clique sur "OK"
+closeNotificatione.addEventListener('click', () => {
+    overlaye.style.display = 'none';
+});
+
+
+
 const form = document.getElementById('contact-form');
-const notification = document.getElementById('notification');
+const overlay = document.getElementById('notification-overlay');
 const notificationMessage = document.getElementById('notification-message');
 const closeNotification = document.getElementById('close-notification');
 
@@ -77,27 +127,27 @@ form.addEventListener('submit', async (event) => {
         if (response.ok) {
             // Affiche un message de succès
             notificationMessage.textContent = 'Message envoyé avec succès !';
-            notification.classList.remove('hidden');
-            notification.style.display = 'block';
+            overlay.classList.remove('hidden');
+            overlay.style.display = 'flex';
         } else {
             // Affiche un message d'erreur
             notificationMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
-            notification.classList.remove('hidden');
-            notification.style.display = 'block';
+            overlay.classList.remove('hidden');
+            overlay.style.display = 'flex';
         }
     } catch (error) {
         // Affiche un message d'erreur si le serveur n'est pas accessible
         notificationMessage.textContent = 'Erreur réseau. Veuillez vérifier votre connexion.';
-        notification.classList.remove('hidden');
-        notification.style.display = 'block';
+        overlay.classList.remove('hidden');
+        overlay.style.display = 'flex';
     }
     // Réinitialise les champs du formulaire
     form.reset(); // Cette méthode vide tous les champs du formulaire
 });
 
-// Ferme la notification lorsqu'on clique sur "OK"
+// Fermer la notification lorsqu'on clique sur "OK"
 closeNotification.addEventListener('click', () => {
-    notification.style.display = 'none';
+    overlay.style.display = 'none';
 });
 
 

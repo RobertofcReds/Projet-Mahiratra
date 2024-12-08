@@ -242,7 +242,7 @@ a:hover {
 
     transition: top 1s cubic-bezier(0.01, 0.51, 0, 1);
     /* Animation */
-    z-index: 90000;
+    z-index: 10000;
     padding: 20px;
     border-radius: 26px;
     overflow: auto;
@@ -446,6 +446,54 @@ a:hover {
     background-color: var(--quart-color);
 }
 
+/* Superposition en arrière-plan */
+#notificatione-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: none; /* Caché par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000; /* Assure que ça reste au-dessus */
+}
+
+#notificatione-overlay.hidden {
+    display: none;
+}
+
+/* Boîte de notificatione */
+#notificatione {
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #dff0d8; /* Vert clair */
+    color: #3c763d; /* Vert foncé */
+    border: 1px solid #d6e9c6;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#notificatione p{
+    color: #3c763d; /* Vert foncé */
+}
+
+/* Bouton "OK" */
+#close-notificatione {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3c763d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-notificatione:hover {
+    background-color: #2b542c;
+}
 
 #contactBlock {
     position: fixed;
@@ -1208,7 +1256,7 @@ footer {
 
         transition: top 1s cubic-bezier(0.01, 0.51, 0, 1);
         /* Animation */
-        z-index: 90000;
+        z-index: 10000;
         padding: 20px;
         border-radius: 10px;
         overflow: auto;

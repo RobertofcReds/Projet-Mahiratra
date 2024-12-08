@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form id="contact-forme" action="http://localhost:3000/contact" method="POST">
                     <div class="cadra">
 
                         <div class="form-group">
@@ -92,6 +92,13 @@
                         <button type="submit">SOUMETTRE</button>
                     </div>
                 </form>
+                <!-- Conteneur pour afficher le message de notification -->
+                <div id="notificatione-overlay" class="hidden">
+                    <div id="notificatione">
+                        <p id="notificatione-message"></p>
+                        <button id="close-notificatione">OK</button>
+                    </div>
+                </div>
             </div>
             </form>
         </div>
@@ -186,9 +193,11 @@
                     </div>
                 </form>
                 <!-- Conteneur pour afficher le message de notification -->
-                <div id="notification" class="hidden">
-                    <p id="notification-message"></p>
-                    <button id="close-notification">OK</button>
+                <div id="notification-overlay" class="hidden">
+                    <div id="notification">
+                        <p id="notification-message"></p>
+                        <button id="close-notification">OK</button>
+                    </div>
                 </div>
             </div>
         </div>
