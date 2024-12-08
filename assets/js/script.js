@@ -66,6 +66,13 @@ let slideWidth = slides[0].clientWidth; // Largeur d'une diapositive
 let currentIndex = 1; // Commencer à la deuxième image (car la première est une duplication)
 let autoSlideInterval;
 
+const btnBackToTop = document.querySelector('.back-to-top-box')
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Fonction pour positionner le slider sur la bonne image
 function updateSliderPosition() {
   slider.style.transition = 'none'; // Désactiver la transition pour un alignement direct
@@ -157,6 +164,19 @@ window.addEventListener('resize', () => {
 
 // Initialisation
 startAutoSlide();
+
+//back to top script
+
+document.addEventListener('scroll', () => {
+
+  if (window.scrollY > 500) {
+    btnBackToTop.style.opacity = "1"
+  } else {
+    btnBackToTop.style.opacity = "0"
+  }
+})
+
+//back to top script
 
 const myForm = document.getElementById('contact-forme');
 const overlaye = document.getElementById('notificatione-overlay');

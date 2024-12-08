@@ -11,6 +11,11 @@
     --font-family-med: kantumruy-med;
     --font-family-bold: kantumruy-bold;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Fonts */
 @font-face {
     font-family: kantumruy-reg;
@@ -34,6 +39,7 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    position: relative;
 }
 
 h2 {
@@ -1057,6 +1063,25 @@ footer {
     font-family: kantumruy-reg;
     display: flex;
     color: #cbcdd1;
+}
+
+.btn-back {
+    border-radius: 500px;
+    border: 2px solid var(--main-color);
+    padding: 7px 10px;
+}
+
+.back-to-top-box {
+    position: fixed;
+    right: 30px;
+    opacity: 0;
+    bottom: 30px;
+    z-index: 1000;
+    transition: 0.5s ease-out;
+}
+
+.fa-arrow-up {
+    color: var(--main-color);
 }
 
 /* ##################### LA PARTIE RESPONSIVE ##########################*/

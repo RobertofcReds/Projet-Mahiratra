@@ -53,6 +53,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const btnBackToTop = document.querySelector('.back-to-top-box')
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//back to top script
+
+document.addEventListener('scroll', () => {
+
+  if (window.scrollY > 500) {
+    btnBackToTop.style.opacity = "1"
+  } else {
+    btnBackToTop.style.opacity = "0"
+  }
+})
+
+//back to top script
+
 const myForm = document.getElementById('contact-forme');
 const overlaye = document.getElementById('notificatione-overlay');
 const notificationeMessage = document.getElementById('notificatione-message');
