@@ -33,41 +33,140 @@ document.addEventListener("DOMContentLoaded", function () {
 // pour la partie barre de recherche
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("here");
-
-
     const showSearchBtn = document.getElementById("showSearch");
     const closeSearchBtn = document.getElementById("closeSearchBtn");
     const searchBlock = document.getElementById("searchBlock");
-    // afficher la barre de recherche
+    const searchInput = document.getElementById("searchInput");
+    const searchIcon = document.getElementById("icon-search");
+    const notificatioResults = document.getElementById("notificatioResults");
+    const notificatioMessage = document.getElementById("notificatioMessage");
+    const prevResultBtn = document.getElementById("prevResult");
+    const nextResultBtn = document.getElementById("nextResult");
+
+    const searchableElements = document.querySelectorAll("h1, h2, h3, a");
+
+    let results = [];
+    let currentIndex = 0;
+
+    // Fonction pour afficher la notificatio des résultats
+    function showResultsNotificatio(message, resultsCount) {
+        notificatioMessage.textContent = message;
+        notificatioResults.classList.add("show");
+
+        // Affiche ou masque les boutons de navigation en fonction des résultats
+        if (resultsCount === 0) {
+            prevResultBtn.style.display = "none";
+            nextResultBtn.style.display = "none";
+            notificatioResults.style.backgroundColor = "#f44336"; // Mettre en rouge
+            // Disparaît automatiquement après 3 secondes
+            setTimeout(() => {
+                notificatioResults.classList.remove("show");
+            }, 3000);
+        } else {
+            prevResultBtn.style.display = "inline-block";
+            nextResultBtn.style.display = "inline-block";
+            notificatioResults.style.backgroundColor = ""; // Restaure la couleur par défaut
+            notificatioMessage.textContent = `${message} (${currentIndex + 1}/${resultsCount})`;
+        }
+    }
+
+    // Fonction pour naviguer vers un résultat donné
+    function navigateToResult(index) {
+        if (index < 0 || index >= results.length) return;
+        currentIndex = index;
+
+        // Scroll vers le résultat sélectionné
+        results[currentIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // Mis à jour la notificatio
+        showResultsNotificatio("Résultats trouvés", results.length);
+    }
+
+    // Recherche principale
+    function searchContent() {
+        const query = searchInput.value.toLowerCase();
+        searchInput.value = ""; // Vider la barre après recherche
+        searchableElements.forEach((el) => el.classList.remove("highlight"));
+
+        if (query.trim() === "") return;
+
+        results = [];
+        currentIndex = 0;
+
+        // Cherche tous les éléments correspondants
+        for (let el of searchableElements) {
+            if (el.textContent.toLowerCase().includes(query)) {
+                el.classList.add("highlight");
+                results.push(el);
+            }
+        }
+
+        if (results.length === 0) {
+            // Notificatio pour aucun résultat trouvé
+            showResultsNotificatio("Aucun résultat trouvé !", 0);
+
+        } else {
+            // Navigue vers le premier résultat
+            navigateToResult(0);
+        }
+    }
+
+    // Bouton suivant
+    nextResultBtn.addEventListener("click", () => {
+        navigateToResult(currentIndex + 1);
+    });
+
+    // Bouton précédent
+    prevResultBtn.addEventListener("click", () => {
+        navigateToResult(currentIndex - 1);
+    });
+
+    // Recherche au clic sur l'icône
+    searchIcon.addEventListener("click", searchContent);
+
+    // Recherche sur appui de "Entrée"
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            searchContent();
+        }
+    });
+
+    // Supprime le surlignage au clic n'importe où
+    document.addEventListener("click", (event) => {
+        if (!searchBlock.contains(event.target) && !notificatioResults.contains(event.target)) {
+            searchableElements.forEach((el) => el.classList.remove("highlight"));
+            notificatioResults.classList.remove("show");
+        }
+    });
+
+    // Affiche ou masque la barre de recherche
     showSearchBtn.addEventListener("click", (event) => {
         event.preventDefault();
         searchBlock.classList.add("show");
-        console.log("clicked");
     });
-    // cacher la barre de recherche
+
     closeSearchBtn.addEventListener("click", () => {
         searchBlock.classList.remove("show");
-        console.log("clicked");
     });
 });
 
 const btnBackToTop = document.querySelector('.back-to-top-box')
 
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 //back to top script
 
 document.addEventListener('scroll', () => {
 
-  if (window.scrollY > 500) {
-    btnBackToTop.style.opacity = "1"
-  } else {
-    btnBackToTop.style.opacity = "0"
-  }
+    if (window.scrollY > 500) {
+        btnBackToTop.style.opacity = "1"
+    } else {
+        btnBackToTop.style.opacity = "0"
+    }
 })
 
 //back to top script

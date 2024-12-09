@@ -286,6 +286,12 @@ a:hover {
     background-color: var(--main-color);
 }
 
+/* Highlight pour les résultats trouvés */
+.highlight {
+    background-color: rgb(51, 167, 86);
+    transition: background-color 0.5s ease;
+}
+
 
 /* Section Partie caché de barre de contact */
 
@@ -705,6 +711,49 @@ div>p.stil {
 
 .fa-arrow-up {
     color: var(--main-color);
+}
+
+/* Notificatio interactive pour les résultats trouvés */
+.notificatio-results {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Vert pour succès */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-family: var(--font-family-reg), sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.notificatio-results.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.notificatio-results button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notificatio-results button:hover {
+    background-color: #e0e0e0;
 }
 
 /* SECTION HERO */
