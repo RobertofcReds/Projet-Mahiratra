@@ -7,9 +7,11 @@
     --black: #000;
     --box-shadow1: 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
     --box-shadow2: 0.1rem 0.1rem #0e7ed3;
-    --font-family-reg: kantumruy-reg;
-    --font-family-med: kantumruy-med;
-    --font-family-bold: kantumruy-bold;
+    --font-family-light: Roboto-Light;
+    --font-family-reg: Roboto-Regular;
+    --font-family-med: Roboto-Medium;
+    --font-family-bold: Roboto-Bold;
+    --font-family-black: Roboto-Black;
 }
 
 html {
@@ -17,24 +19,35 @@ html {
 }
 
 /* Fonts */
+
 @font-face {
-    font-family: kantumruy-reg;
-    src: url("../font/kantumruy/KantumruyPro-Regular.ttf");
+    font-family: Roboto-Black;
+    src: url("../font/Roboto/Roboto-Black.ttf");
 }
 
 @font-face {
-    font-family: kantumruy-med;
-    src: url("../font/kantumruy/KantumruyPro-Medium.ttf");
+    font-family: Roboto-Bold;
+    src: url("../font/Roboto/Roboto-Bold.ttf");
 }
 
 @font-face {
-    font-family: kantumruy-bold;
-    src: url("../font/kantumruy/KantumruyPro-Bold.ttf");
+    font-family: Roboto-Medium;
+    src: url("../font/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../font/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../font/Roboto/Roboto-Light.ttf");
 }
 
 /* General Styles */
 body {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -45,10 +58,15 @@ body {
 h2 {
     text-decoration: underline;
     color: var(--main-color);
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 p {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     margin: 0;
     margin-bottom: 20px;
     color: var(--black)
@@ -61,6 +79,7 @@ section {
 a {
     text-decoration: none;
     color: var(--black);
+    font-weight: normal;
 }
 
 a:hover {
@@ -76,7 +95,7 @@ a:hover {
     background: var(--white);
     z-index: 1000;
     align-items: center;
-    padding: 0.5rem 2%;
+    padding: 0.2rem 2%;
     box-shadow: var(--box-shadow1);
 }
 
@@ -109,7 +128,9 @@ a:hover {
 }
 
 .header img {
-    width: 150px;
+    width: 140px;
+    margin-left: -2rem;
+    margin-bottom: -0.2rem;
 }
 
 .navbar {
@@ -119,9 +140,9 @@ a:hover {
 }
 
 .header .navbar a {
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 2rem;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     display: inline-block;
     position: relative;
 }
@@ -212,7 +233,7 @@ a:hover {
     border: 0.5px solid var(--main-color);
     border-radius: 5px;
     font-size: 18px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     outline: none;
 }
 
@@ -332,18 +353,18 @@ a:hover {
     text-decoration: underline;
     text-align: center;
     font-size: 17px;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     padding-top: 5px;
     cursor: pointer;
 }
 
 .tex-details {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 20px;
 }
 
 .tex-details p.p1 {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 16px;
     line-height: 28px;
     padding-top: 20px;
@@ -354,7 +375,7 @@ a:hover {
 .tex-details p.p1 span {
     color: var(--main-color);
     font-style: italic;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
 }
 
 .tex-details p.p1 span span {
@@ -372,7 +393,7 @@ a:hover {
     padding-left: 14px;
     font-size: 16px;
     padding-top: 14px;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med);
 }
 
 /*  */
@@ -405,7 +426,7 @@ a:hover {
 }
 
 .form-group label {
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     font-size: 15px;
     color: var(--main-color);
     display: block;
@@ -419,7 +440,7 @@ a:hover {
     border: 0.5px solid var(--main-color);
     border-radius: 5px;
     font-size: 15px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     outline: none;
 }
 
@@ -550,18 +571,6 @@ a:hover {
     text-align: center;
 }
 
-/* Section Hero */
-/* .hero {
-    padding: 0rem 0% !important;
-    position: relative;
-    text-align: center;
-    background: url(../image/3409297.jpg);
-    height: 36rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
 
 
 /* Slider Section */
@@ -574,7 +583,7 @@ a:hover {
 }
 
 .hero-content {
-    top: 3rem;
+    top: 5rem;
     margin: 30px;
     position: absolute;
 }
@@ -590,7 +599,7 @@ a:hover {
 .btn-design-hero {
     padding: 5px 10px;
     color: white;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     font-size: 1.5rem;
     border-radius: 30px 0;
     background: rgba(0, 0, 0, 0.25);
@@ -599,7 +608,7 @@ a:hover {
 }
 
 .slider-container h1 {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 3rem;
     text-align: center;
     color: var(--white);
@@ -610,7 +619,7 @@ a:hover {
     padding: 20px 0;
     margin: 0 4rem;
     text-align: left;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     line-height: 30px;
     font-size: 1.2rem;
     color: var(--white);
@@ -624,7 +633,7 @@ a:hover {
 .bouton-p .btn-primary {
     display: flex;
     width: fit-content;
-    padding: 15px 30px;
+    padding: 10px 25px;
     background-color: var(--main-color);
     color: white;
     border-radius: 20px 0;
@@ -641,8 +650,6 @@ a:hover {
     transition: 500ms;
     border-radius: 0 20px;
 }
-
-
 
 .slider {
     display: flex;
@@ -710,7 +717,7 @@ button.next {
 }
 
 .about h2 {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 2.5rem;
     color: var(--main-color);
 }
@@ -741,7 +748,7 @@ button.next {
 .about-text::after {
     content: "";
     width: 5px;
-    height: 331px;
+    height: 317px;
     display: block;
     background-color: var(--main-color);
     position: absolute;
@@ -750,16 +757,16 @@ button.next {
 }
 
 .about-text p {
-    font-family: kantumruy-med;
+    font-family: var(--font-family-reg), sans-serif;
     margin-left: 30px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
 }
 
 .about-text .sous-texte {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-med), sans-serif;
     margin-left: 30px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
 }
 
@@ -796,7 +803,7 @@ button.next {
 .about-feature p {
     text-align: left;
     color: var(--main-color);
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
 }
 
 .icon {
@@ -814,7 +821,7 @@ button.next {
     padding: 12px 40px;
     margin-top: 20px;
     font-size: 1.5rem;
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     border: none;
     border-radius: 20px 0;
     cursor: pointer;
@@ -836,7 +843,7 @@ button.next {
     border: 0;
     color: white;
     font-size: 20px;
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold);
     background-color: var(--main-color);
 }
 
@@ -848,7 +855,7 @@ button.next {
 }
 
 .services h2 {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 2.5rem;
 }
 
@@ -874,14 +881,14 @@ button.next {
 }
 
 .service-item h3 {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     margin-top: 15px;
     font-size: 1.5rem;
     color: var(--black);
 }
 
 .service-item p {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 1rem;
     margin-top: 10px;
 }
@@ -927,14 +934,18 @@ a.btn-more {
 }
 
 .card .content h3 {
+    margin-top: 5px;
     color: var(--main-color);
-    font-family: kantumruy-med;
-    font-size: 22px;
+    font-family: var(--font-family-med), sans-serif;
+    font-size: 19px;
+    font-weight: normal;
 }
 
 .card .content p {
-    font-family: kantumruy-reg;
-    font-size: 18px;
+    font-family: var(--font-family-reg), sans-serif;
+    font-size: 17px;
+    line-height: normal;
+    line-height: 1.5rem;
 }
 
 /* Appel transitionserrvice et footer */
@@ -958,7 +969,7 @@ a.btn-more {
 
 .bloc-appelez p {
     color: var(--white);
-    width: 150px;
+    width: 149px;
     margin: 0;
 }
 
@@ -988,7 +999,7 @@ a.btn-more {
 .modal-content h3 {
     font-weight: normal;
     margin-bottom: 20px;
-    font-family: var(--font-family-med);
+    font-family: var(--font-family-med), sans-serif;
     color: var(--main-color);
     text-transform: uppercase;
 }
@@ -1032,26 +1043,29 @@ a.btn-more {
 footer {
     background-color: var(--secondary-color);
     color: white;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
 }
 
 .footer-top {
     display: flex;
     gap: 100px;
     background-color: var(--main-color);
-    padding: 20px;
+    padding: 15px;
     padding-left: 40px;
     overflow: auto;
 }
 
 .about-footer-text h3 {
     font-size: 24px;
+    font-family: var(--font-family-med), sans-serif;
+    margin: 1rem 0;
 }
 
 .about-footer-text p {
-    font-family: kantumruy-reg;
-    margin: 10px 0;
+    font-family: var(--font-family-reg), sans-serif;
+    margin: 0;
     color: var(--white);
+    line-height: 1.5rem;
 }
 
 .newsletter-signup {
@@ -1066,15 +1080,9 @@ footer {
     outline: none;
 }
 
-/* .newsletter-signup input:focus {
-    border: 2px solid var(--main-color);
-    border-color: var(--main-color);
-    transition: 0.5s ease-in-out !important;
-} */
-
 .newsletter-signup button {
     padding: 10px 20px;
-    background-color: var(--main-color);
+    background-color: var(--main-color), sans-serif;
     color: var(--white);
     border: none;
     cursor: pointer;
@@ -1138,7 +1146,7 @@ footer {
 
 .logo-column p {
     line-height: 25px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 15px;
     margin-bottom: 10px;
     color: #cbcdd1;
@@ -1155,7 +1163,7 @@ footer {
 
 .contact-column p {
     line-height: 30px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     color: #cbcdd1;
 }
 
@@ -1170,8 +1178,11 @@ footer {
 
 .abesoin {
     display: flex;
-    padding-left: 40px;
-    padding-bottom: 30px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-left: 2rem;
     margin-top: -40px;
 }
 
@@ -1199,15 +1210,17 @@ footer {
 }
 
 .footer-bottom {
-    padding: 8px 40px 8px 40px;
+    display: flex;
+    text-align: center;
+    padding-left: 2rem;
+    justify-content: space-between;
     background-color: var(--tert-color);
-    border-top: 0px solid var(--main-color);
 }
 
 .footer-bottom .p {
     font-size: 15px;
     padding: 10px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     display: flex;
     color: #cbcdd1;
 }
@@ -1303,7 +1316,7 @@ footer {
         border: 0.5px solid var(--main-color);
         border-radius: 5px;
         font-size: 16px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         outline: none;
     }
 
@@ -1326,7 +1339,7 @@ footer {
     }
 
     #searchBlock {
-        left: 20%;
+        left: 0%;
         position: absolute;
         top: -500%;
         cursor: pointer;
@@ -1338,7 +1351,7 @@ footer {
         transition: top 1s cubic-bezier(0.01, 0.51, 0, 1);
         /* Animation */
         z-index: 10000;
-        padding: 20px;
+        padding: 20px 0;
         border-radius: 10px;
         overflow: auto;
     }
@@ -1377,7 +1390,7 @@ footer {
         border: initial;
         border-radius: 7px;
         box-shadow: initial;
-        width: 50vw;
+        width: 47vw;
         background-color: var(--main-color);
     }
 }
@@ -1426,18 +1439,18 @@ footer {
         text-decoration: underline;
         text-align: center;
         font-size: 16px;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         padding-top: 5px;
         cursor: pointer;
     }
 
     .tex-details {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         font-size: 20px;
     }
 
     .tex-details p.p1 {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         font-size: 20px;
         line-height: 30px;
         padding-top: 50px;
@@ -1448,7 +1461,7 @@ footer {
     .tex-details p.p1 span {
         color: var(--main-color);
         font-style: italic;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
     }
 
     .tex-details p.p1 span span {
@@ -1464,7 +1477,7 @@ footer {
     .tex-details p.p3 {
         padding-left: 30px;
         padding-top: 30px;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
     }
 
     /*  */
@@ -1497,7 +1510,7 @@ footer {
     }
 
     .form-group label {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 14px;
         color: var(--main-color);
         display: contents;
@@ -1511,7 +1524,7 @@ footer {
         border: 0.5px solid var(--main-color);
         border-radius: 5px;
         font-size: 12px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         outline: none;
     }
 
@@ -1601,7 +1614,7 @@ footer {
         background: var(--white);
         z-index: 1000;
         align-items: center;
-        padding: 0.5rem 2%;
+        padding: 0.2rem 2%;
         box-shadow: var(--box-shadow1);
     }
 
@@ -1670,12 +1683,13 @@ footer {
     .header img {
         width: 100px;
         margin-left: -25px;
+        margin-bottom: -0.2rem;
     }
 
     .header .navbar a {
         font-size: 15px;
         margin-left: 0rem;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         display: inline-block;
         position: relative;
     }
@@ -1712,7 +1726,7 @@ footer {
     .scale {
         display: block;
         position: absolute;
-        top: 63px;
+        top: 54px;
         left: 0%;
         background-color: var(--white);
         border: 1px solid var(--main-color);
@@ -1784,7 +1798,7 @@ footer {
         background: var(--white);
         z-index: 1000;
         align-items: center;
-        padding: 0.4rem 2%;
+        padding: 0.2rem 2%;
         box-shadow: var(--box-shadow1);
     }
 
@@ -1861,12 +1875,13 @@ footer {
     .header img {
         width: 100px;
         margin-left: -25px;
+        margin-bottom: -0.2rem;
     }
 
     .header .navbar a {
         font-size: 13px;
         margin-left: 0rem;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         display: inline-block;
         position: relative;
     }
@@ -1903,7 +1918,7 @@ footer {
     .scale {
         display: block;
         position: absolute;
-        top: 2.88rem;
+        top: 2.5rem;
         left: 0%;
         background-color: var(--white);
         border: 1px solid var(--main-color);
@@ -2013,6 +2028,7 @@ footer {
     button.prev:hover,
     button.next:hover {
         background: rgba(0, 0, 0, 0.8);
+        color: var(--white);
     }
 
     button.prev {
@@ -2025,7 +2041,7 @@ footer {
 
     /* plus */
     .hero-content {
-        top: 2.5rem;
+        top: 4rem;
         margin: 30px;
         position: absolute;
     }
@@ -2041,7 +2057,7 @@ footer {
     .btn-design-hero {
         padding: 5px 10px;
         color: white;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 1.3rem;
         border-radius: 30px 0;
         background: rgba(0, 0, 0, 0.25);
@@ -2050,7 +2066,7 @@ footer {
     }
 
     .slider-container h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 2rem;
         text-align: center;
         color: var(--white);
@@ -2061,7 +2077,7 @@ footer {
         padding: 20px 0;
         margin: 0 3rem;
         text-align: left;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         line-height: 30px;
         font-size: 1rem;
         color: var(--white);
@@ -2098,7 +2114,7 @@ footer {
 
     /* plus */
     .hero-content {
-        top: 2rem;
+        top: 3.5rem;
         margin: 30px;
         position: absolute;
     }
@@ -2114,7 +2130,7 @@ footer {
     .btn-design-hero {
         padding: 5px 10px;
         color: white;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 1.1rem;
         border-radius: 30px 0;
         background: rgba(0, 0, 0, 0.25);
@@ -2123,7 +2139,7 @@ footer {
     }
 
     .slider-container h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 1.7rem;
         text-align: center;
         color: var(--white);
@@ -2134,7 +2150,7 @@ footer {
         padding: 20px 0;
         margin: 0 2.5rem;
         text-align: left;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         line-height: 30px;
         font-size: 1rem;
         color: var(--white);
@@ -2216,6 +2232,7 @@ footer {
     button.prev:hover,
     button.next:hover {
         background: rgba(0, 0, 0, 0.8);
+        color: var(--white);
     }
 
     button.prev {
@@ -2228,7 +2245,7 @@ footer {
 
     /* plus */
     .hero-content {
-        top: 30px;
+        top: 3.5rem;
         margin: 20px;
         position: absolute;
     }
@@ -2245,7 +2262,7 @@ footer {
     .btn-design-hero {
         padding: 5px 10px;
         color: white;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 15px;
         border-radius: 30px 0;
         background: rgba(0, 0, 0, 0.25);
@@ -2254,18 +2271,19 @@ footer {
     }
 
     .slider-container h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 1.3rem;
         text-align: center;
         color: var(--white);
         margin-bottom: 0;
+        margin-top: 2rem;
     }
 
     .slider-container p {
         padding: 20px 0;
         margin: 0 1rem;
         text-align: left;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         line-height: 20px;
         font-size: 13px;
         color: var(--white);
@@ -2295,7 +2313,7 @@ footer {
         color: var(--main-color);
         border: 1.5px solid var(--main-color);
         transition: 500ms;
-        border-radius: 0 20px;
+        border-radius: 0 12px;
     }
 }
 
@@ -2347,6 +2365,7 @@ footer {
     button.prev:hover,
     button.next:hover {
         background: rgba(0, 0, 0, 0.8);
+        color: var(--white);
     }
 
     button.prev {
@@ -2359,7 +2378,7 @@ footer {
 
     /* plus */
     .hero-content {
-        top: 25px;
+        top: 3rem;
         margin: 15px;
         position: absolute;
     }
@@ -2376,7 +2395,7 @@ footer {
     .btn-design-hero {
         padding: 5px 10px;
         color: white;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 13px;
         border-radius: 30px 0;
         background: rgba(0, 0, 0, 0.25);
@@ -2385,18 +2404,19 @@ footer {
     }
 
     .slider-container h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 1.15rem;
         text-align: center;
         color: var(--white);
         margin-bottom: 0;
+        margin-top: 2rem;
     }
 
     .slider-container p {
         padding: 20px 0;
         margin: 0 12px;
         text-align: left;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         line-height: 18px;
         font-size: 12px;
         color: var(--white);
@@ -2426,7 +2446,7 @@ footer {
         color: var(--main-color);
         border: 1px solid var(--main-color);
         transition: 500ms;
-        border-radius: 0 20px;
+        border-radius: 0 10px;
     }
 }
 
@@ -2457,7 +2477,7 @@ footer {
     .about-text::after {
         content: "";
         width: 5px;
-        height: 323px;
+        height: 317px;
         display: block;
         background-color: var(--main-color);
         position: absolute;
@@ -2467,16 +2487,16 @@ footer {
     }
 
     .about-text p {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-reg);
         margin-left: 0;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
     }
 
     .about-text .sous-texte {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-med);
         margin-left: 0;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
     }
 
@@ -2515,7 +2535,7 @@ footer {
     .about-feature p {
         text-align: center;
         color: var(--main-color);
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
     }
 
     .icon {
@@ -2533,7 +2553,7 @@ footer {
         padding: 12px 40px;
         margin-top: 20px;
         font-size: 1.5rem;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         border: none;
         border-radius: 20px 0;
         cursor: pointer;
@@ -2555,7 +2575,7 @@ footer {
         border: 0;
         color: white;
         font-size: 20px;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         background-color: var(--main-color);
     }
 }
@@ -2595,16 +2615,16 @@ footer {
     }
 
     .about-text p {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-reg);
         margin-left: 0;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
     }
 
     .about-text .sous-texte {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-med);
         margin-left: 0;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
     }
 
@@ -2643,7 +2663,7 @@ footer {
     .about-feature p {
         text-align: center;
         color: var(--main-color);
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
     }
 
     .icon {
@@ -2661,7 +2681,7 @@ footer {
         padding: 12px 40px;
         margin-top: 20px;
         font-size: 3vw;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         border: none;
         border-radius: 20px 0;
         cursor: pointer;
@@ -2683,7 +2703,7 @@ footer {
         border: 0;
         color: white;
         font-size: 20px;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         background-color: var(--main-color);
     }
 }
@@ -2697,7 +2717,7 @@ footer {
     }
 
     .about h2 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 1.5rem;
         color: var(--main-color);
     }
@@ -2741,14 +2761,14 @@ footer {
     }
 
     .about-text p {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-reg);
         margin-left: 0;
         font-size: 15px;
         line-height: 26px;
     }
 
     .about-text .sous-texte {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-med);
         margin-left: 0;
         max-width: 300px;
         display: contents;
@@ -2791,7 +2811,7 @@ footer {
     .about-feature p {
         text-align: center;
         color: var(--main-color);
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         line-height: 22px;
     }
 
@@ -2810,7 +2830,7 @@ footer {
         padding: 12px 40px;
         margin-top: 0px;
         font-size: 3vw;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         border: none;
         border-radius: 15px 0;
         cursor: pointer;
@@ -2833,7 +2853,7 @@ footer {
         border: 0;
         color: white;
         font-size: 15px;
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         background-color: var(--main-color);
         display: inline-flex;
         justify-content: center;
@@ -2843,13 +2863,12 @@ footer {
 /* service de la page d'accueil */
 @media (max-width: 480px) {
     .services h2 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold);
         font-size: 1.5rem;
     }
 
     .services h3 {
         font-size: 1rem;
-        font-weight: 600;
     }
 
     .services-container {
@@ -2875,14 +2894,18 @@ footer {
     }
 
     .card .content h3 {
+        margin-top: 5px;
         color: var(--main-color);
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med);
         font-size: 17px;
+        font-weight: normal;
     }
 
     .card .content p {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         font-size: 16px;
+        line-height: normal;
+        line-height: 1.5rem;
     }
 
     .bloc-appelez {
@@ -2910,7 +2933,7 @@ footer {
         gap: 0;
         flex-direction: column;
         background-color: var(--main-color);
-        padding: 20px;
+        padding: 15px;
         padding-left: 40px;
         overflow: auto;
     }
@@ -2975,7 +2998,7 @@ footer {
 
     .logo-column p {
         line-height: 25px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         font-size: 15px;
         margin-bottom: 10px;
         color: #cbcdd1;
@@ -2992,7 +3015,7 @@ footer {
 
     .contact-column p {
         line-height: 30px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg);
         color: #cbcdd1;
     }
 
@@ -3040,13 +3063,20 @@ footer {
         flex-direction: column;
         background-color: var(--main-color);
         padding: 20px;
-        /* padding-left: 40px; */
         overflow: auto;
     }
 
     .footer-column {
         max-width: 400px;
         margin-left: 0px;
+    }
+
+    .abesoin {
+       margin-left: 0.7rem; 
+    }
+
+    .footer-bottom {
+        padding-left: 0.7rem;
     }
 }
 

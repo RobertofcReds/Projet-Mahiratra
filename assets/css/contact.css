@@ -7,9 +7,11 @@
     --black: #000;
     --box-shadow1: 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
     --box-shadow2: 0.1rem 0.1rem #0e7ed3;
-    --font-family-reg: kantumruy-reg;
-    --font-family-med: kantumruy-med;
-    --font-family-bold: kantumruy-bold;
+    --font-family-light: Roboto-Light;
+    --font-family-reg: Roboto-Regular;
+    --font-family-med: Roboto-Medium;
+    --font-family-bold: Roboto-Bold;
+    --font-family-black: Roboto-Black;
 }
 
 html {
@@ -17,24 +19,35 @@ html {
 }
 
 /* Fonts */
+
 @font-face {
-    font-family: kantumruy-reg;
-    src: url("../font/kantumruy/KantumruyPro-Regular.ttf");
+    font-family: Roboto-Black;
+    src: url("../font/Roboto/Roboto-Black.ttf");
 }
 
 @font-face {
-    font-family: kantumruy-med;
-    src: url("../font/kantumruy/KantumruyPro-Medium.ttf");
+    font-family: Roboto-Bold;
+    src: url("../font/Roboto/Roboto-Bold.ttf");
 }
 
 @font-face {
-    font-family: kantumruy-bold;
-    src: url("../font/kantumruy/KantumruyPro-Bold.ttf");
+    font-family: Roboto-Medium;
+    src: url("../font/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../font/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../font/Roboto/Roboto-Light.ttf");
 }
 
 /* General Styles */
 body {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -45,21 +58,28 @@ body {
 h2 {
     text-decoration: underline;
     color: var(--main-color);
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 p {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     margin: 0;
     margin-bottom: 20px;
+    color: var(--black)
 }
 
 section {
-    padding: 5rem 2%;
+    padding: 3rem 2%;
 }
 
 a {
     text-decoration: none;
     color: var(--black);
+    font-weight: normal;
 }
 
 a:hover {
@@ -76,7 +96,7 @@ a:hover {
     background: var(--white);
     z-index: 1000;
     align-items: center;
-    padding: 0.5rem 2%;
+    padding: 0.2rem 2%;
     box-shadow: var(--box-shadow1);
 }
 
@@ -109,7 +129,9 @@ a:hover {
 }
 
 .header img {
-    width: 150px;
+    width: 140px;
+    margin-left: -2rem;
+    margin-bottom: -0.2rem;
 }
 
 .navbar {
@@ -119,12 +141,11 @@ a:hover {
 }
 
 .header .navbar a {
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 2rem;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     display: inline-block;
     position: relative;
-
 }
 
 .header .navbar a:hover {
@@ -146,10 +167,6 @@ a:hover {
 
 .header .navbar .scale a:hover::after {
     transform: scaleX(1);
-}
-
-.header .navbar .centre {
-    display: flex;
 }
 
 .centre {
@@ -214,7 +231,7 @@ a:hover {
     border: 0.5px solid var(--main-color);
     border-radius: 5px;
     font-size: 18px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     outline: none;
 }
 
@@ -334,19 +351,19 @@ a:hover {
     text-decoration: underline;
     text-align: center;
     font-size: 20px;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     padding-top: 5px;
     cursor: pointer;
 }
 
 .tex-details {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 20px;
 }
 
 .tex-details p.p1 {
     color: var(--black);
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 18px;
     line-height: 28px;
     padding-top: 30px;
@@ -357,7 +374,7 @@ a:hover {
 .tex-details p.p1 span {
     color: var(--main-color);
     font-style: italic;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
 }
 
 .tex-details p.p1 span span {
@@ -376,7 +393,7 @@ a:hover {
     font-size: 17px;
     padding-left: 20px;
     padding-top: 5px;
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
 }
 
 /*  */
@@ -409,7 +426,7 @@ a:hover {
 }
 
 .form-group label {
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     font-size: 20px;
     color: var(--main-color);
     display: block;
@@ -423,7 +440,7 @@ a:hover {
     border: 0.5px solid var(--main-color);
     border-radius: 5px;
     font-size: 18px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
 }
 
 .form-group textarea {
@@ -596,7 +613,7 @@ a:hover {
 }
 
 .hero-content h1 {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 5rem;
     margin-top: 6rem;
     margin-bottom: 1rem;
@@ -607,6 +624,10 @@ a:hover {
     justify-content: center;
     font-size: 25px;
     gap: 8px;
+}
+
+.texte-para p {
+    color: var(--white);
 }
 
 .opacity {
@@ -655,7 +676,7 @@ a:hover {
 }
 
 .form-group label {
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
     font-size: 20px;
     color: var(--main-color);
     display: block;
@@ -669,7 +690,7 @@ a:hover {
     border: 0.5px solid var(--main-color);
     border-radius: 5px;
     font-size: 18px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     outline: none;
 }
 
@@ -692,33 +713,6 @@ a:hover {
     color: var(--main-color);
 }
 
-/* .icon-user img {
-    width: 30px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-email img {
-    padding-top: 3px;
-    width: 30px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-folder img {
-    padding-top: 3px;
-    width: 30px;
-    height: auto;
-    position: absolute;
-}
-
-.icon-message img {
-    padding-top: 3px;
-    width: 30px;
-    height: auto;
-    position: absolute;
-} */
-
 .body-contact button {
     width: 40%;
     padding: 10px;
@@ -733,7 +727,7 @@ a:hover {
 .body-contact button:hover {
     background-color: var(--quart-color);
 }
-
+ 
 /* Superposition en arrière-plan */
 #notification-overlay {
     position: fixed;
@@ -787,18 +781,18 @@ a:hover {
 }
 
 .corp-cordonne p {
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 20px;
 }
 
 .corp-cordonne .titre-coord p {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 36px;
     color: var(--main-color);
 }
 
 .titre-contact p {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 45px;
     color: var(--black);
 }
@@ -838,13 +832,13 @@ a:hover {
 }
 
 .grid .titra-adresse {
-    font-family: kantumruy-bold;
+    font-family: var(--font-family-bold), sans-serif;
     font-size: 35px;
     color: var(--main-color);
 }
 
 .grid .texte-adresse {
-    font-family: kantumruy-med;
+    font-family: var(--font-family-med), sans-serif;
 }
 
 
@@ -852,26 +846,29 @@ a:hover {
 footer {
     background-color: var(--secondary-color);
     color: white;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
 }
 
 .footer-top {
     display: flex;
     gap: 100px;
     background-color: var(--main-color);
-    padding: 20px;
+    padding: 15px;
     padding-left: 40px;
     overflow: auto;
 }
 
 .about-footer-text h3 {
     font-size: 24px;
+    font-family: var(--font-family-med), sans-serif;
+    margin: 1rem 0;
 }
 
 .about-footer-text p {
-    font-family: kantumruy-reg;
-    margin: 10px 0;
+    font-family: var(--font-family-reg), sans-serif;
+    margin: 0;
     color: var(--white);
+    line-height: 1.5rem;
 }
 
 .newsletter-signup {
@@ -886,15 +883,9 @@ footer {
     outline: none;
 }
 
-/* .newsletter-signup input:focus {
-    border: 2px solid var(--main-color);
-    border-color: var(--main-color);
-    transition: 0.5s ease-in-out !important;
-} */
-
 .newsletter-signup button {
     padding: 10px 20px;
-    background-color: var(--main-color);
+    background-color: var(--main-color), sans-serif;
     color: var(--white);
     border: none;
     cursor: pointer;
@@ -958,7 +949,7 @@ footer {
 
 .logo-column p {
     line-height: 25px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     font-size: 15px;
     margin-bottom: 10px;
     color: #cbcdd1;
@@ -975,7 +966,7 @@ footer {
 
 .contact-column p {
     line-height: 30px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     color: #cbcdd1;
 }
 
@@ -990,8 +981,11 @@ footer {
 
 .abesoin {
     display: flex;
-    padding-left: 40px;
-    padding-bottom: 30px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-left: 2rem;
     margin-top: -40px;
 }
 
@@ -1019,15 +1013,17 @@ footer {
 }
 
 .footer-bottom {
-    padding: 8px 40px 8px 40px;
+    display: flex;
+    text-align: center;
+    padding-left: 2rem;
+    justify-content: space-between;
     background-color: var(--tert-color);
-    border-top: 0px solid var(--main-color);
 }
 
 .footer-bottom .p {
     font-size: 15px;
     padding: 10px;
-    font-family: kantumruy-reg;
+    font-family: var(--font-family-reg), sans-serif;
     display: flex;
     color: #cbcdd1;
 }
@@ -1121,7 +1117,7 @@ footer {
         border: 0.5px solid var(--main-color);
         border-radius: 5px;
         font-size: 16px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         outline: none;
     }
 
@@ -1144,7 +1140,7 @@ footer {
     }
 
     #searchBlock {
-        left: 20%;
+        left: 0%;
         position: absolute;
         top: -500%;
         cursor: pointer;
@@ -1156,7 +1152,7 @@ footer {
         transition: top 1s cubic-bezier(0.01, 0.51, 0, 1);
         /* Animation */
         z-index: 10000;
-        padding: 20px;
+        padding: 20px 0;
         border-radius: 10px;
         overflow: auto;
     }
@@ -1188,13 +1184,14 @@ footer {
         text-align: center;
     }
 
+
     .cadreS {
         display: inline-block;
         padding: 10px;
         border: initial;
         border-radius: 7px;
         box-shadow: initial;
-        width: 50vw;
+        width: 47vw;
         background-color: var(--main-color);
     }
 }
@@ -1243,18 +1240,18 @@ footer {
         text-decoration: underline;
         text-align: center;
         font-size: 16px;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         padding-top: 5px;
         cursor: pointer;
     }
 
     .tex-details {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         font-size: 20px;
     }
 
     .tex-details p.p1 {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         font-size: 20px;
         line-height: 30px;
         padding-top: 50px;
@@ -1265,7 +1262,7 @@ footer {
     .tex-details p.p1 span {
         color: var(--main-color);
         font-style: italic;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
     }
 
     .tex-details p.p1 span span {
@@ -1281,7 +1278,7 @@ footer {
     .tex-details p.p3 {
         padding-left: 30px;
         padding-top: 30px;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
     }
 
     /*  */
@@ -1314,7 +1311,7 @@ footer {
     }
 
     .form-group label {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         font-size: 14px;
         color: var(--main-color);
         display: contents;
@@ -1328,7 +1325,7 @@ footer {
         border: 0.5px solid var(--main-color);
         border-radius: 5px;
         font-size: 12px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         outline: none;
     }
 
@@ -1417,7 +1414,7 @@ footer {
         background: var(--white);
         z-index: 1000;
         align-items: center;
-        padding: 0.5rem 2%;
+        padding: 0.2rem 2%;
         box-shadow: var(--box-shadow1);
     }
 
@@ -1486,12 +1483,13 @@ footer {
     .header img {
         width: 100px;
         margin-left: -25px;
+        margin-bottom: -0.2rem;
     }
 
     .header .navbar a {
         font-size: 15px;
         margin-left: 0rem;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         display: inline-block;
         position: relative;
     }
@@ -1528,7 +1526,7 @@ footer {
     .scale {
         display: block;
         position: absolute;
-        top: 63px;
+        top: 54px;
         left: 0%;
         background-color: var(--white);
         border: 1px solid var(--main-color);
@@ -1600,7 +1598,7 @@ footer {
         background: var(--white);
         z-index: 1000;
         align-items: center;
-        padding: 0.4rem 2%;
+        padding: 0.2rem 2%;
         box-shadow: var(--box-shadow1);
     }
 
@@ -1677,12 +1675,13 @@ footer {
     .header img {
         width: 100px;
         margin-left: -25px;
+        margin-bottom: -0.2rem;
     }
 
     .header .navbar a {
         font-size: 13px;
         margin-left: 0rem;
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         display: inline-block;
         position: relative;
     }
@@ -1719,7 +1718,7 @@ footer {
     .scale {
         display: block;
         position: absolute;
-        top: 2.88rem;
+        top: 2.5rem;
         left: 0%;
         background-color: var(--white);
         border: 1px solid var(--main-color);
@@ -1784,7 +1783,7 @@ footer {
 /* section HERO */
 @media (max-width: 720px) {
     .hero-content h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 4rem;
         margin-top: 5rem;
         margin-bottom: 1rem;
@@ -1800,7 +1799,7 @@ footer {
 
 @media (max-width: 480px) {
     .hero-content h1 {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 3rem;
         margin-top: 5rem;
         margin-bottom: 1rem;
@@ -1846,7 +1845,7 @@ footer {
     }
 
     .form-group label {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         font-size: 14px;
         color: var(--main-color);
         display: contents;
@@ -1860,7 +1859,7 @@ footer {
         border: 0.5px solid var(--main-color);
         border-radius: 5px;
         font-size: 12px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         outline: none;
     }
 
@@ -1971,18 +1970,18 @@ footer {
     }
 
     .corp-cordonne p {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         font-size: 18px;
     }
 
     .corp-cordonne .titre-coord p {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 30px;
         color: var(--main-color);
     }
 
     .titre-contact p {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 30px;
         color: var(--black);
     }
@@ -2010,13 +2009,13 @@ footer {
     }
 
     .grid .titra-adresse {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 35px;
         color: var(--main-color);
     }
 
     .grid .texte-adresse {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
     }
 }
 
@@ -2042,18 +2041,18 @@ footer {
     }
 
     .corp-cordonne p {
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         font-size: 15px;
     }
 
     .corp-cordonne .titre-coord p {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 20px;
         color: var(--main-color);
     }
 
     .titre-contact p {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 20px;
         color: var(--black);
     }
@@ -2082,14 +2081,14 @@ footer {
     }
 
     .grid .titra-adresse {
-        font-family: kantumruy-bold;
+        font-family: var(--font-family-bold), sans-serif;
         font-size: 20px;
         color: var(--main-color);
         margin-bottom: 10px;
     }
 
     .grid .texte-adresse {
-        font-family: kantumruy-med;
+        font-family: var(--font-family-med), sans-serif;
         margin-bottom: 10px;
     }
 }
@@ -2103,7 +2102,7 @@ footer {
         gap: 0;
         flex-direction: column;
         background-color: var(--main-color);
-        padding: 20px;
+        padding: 15px;
         padding-left: 40px;
         overflow: auto;
     }
@@ -2168,7 +2167,7 @@ footer {
 
     .logo-column p {
         line-height: 25px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         font-size: 15px;
         margin-bottom: 10px;
         color: #cbcdd1;
@@ -2185,7 +2184,7 @@ footer {
 
     .contact-column p {
         line-height: 30px;
-        font-family: kantumruy-reg;
+        font-family: var(--font-family-reg), sans-serif;
         color: #cbcdd1;
     }
 
@@ -2233,13 +2232,20 @@ footer {
         flex-direction: column;
         background-color: var(--main-color);
         padding: 20px;
-        /* padding-left: 40px; */
         overflow: auto;
     }
 
     .footer-column {
         max-width: 400px;
         margin-left: 0px;
+    }
+
+    .abesoin {
+       margin-left: 0.7rem; 
+    }
+
+    .footer-bottom {
+        padding-left: 0.7rem;
     }
 }
 

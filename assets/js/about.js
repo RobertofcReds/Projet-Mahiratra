@@ -9,7 +9,6 @@ menubtn.addEventListener('click', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Notre code JavaScript ici
-  console.log("here");
 
   const showContactBtn = document.getElementById("showContact");
   const closeContactBtn = document.getElementById("closeContactBtn");
@@ -19,13 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   showContactBtn.addEventListener("click", (event) => {
     event.preventDefault();
     contactBlock.classList.add("show");
-    console.log("clicked");
   });
 
   // Cache le bloc contact
   closeContactBtn.addEventListener("click", () => {
     contactBlock.classList.remove("show");
-    console.log("clicked");
   });
 });
 // Sélectionne les éléments

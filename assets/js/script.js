@@ -12,7 +12,6 @@ menubtn.addEventListener('click', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Notre code JavaScript ici
-  console.log("here");
 
   const showContactBtn = document.getElementById("showContact");
   const closeContactBtn = document.getElementById("closeContactBtn");
