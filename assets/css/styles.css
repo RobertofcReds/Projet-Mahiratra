@@ -641,6 +641,7 @@ a:hover {
     border: none;
     cursor: pointer;
     border: 1.5px solid var(--main-color);
+    margin-top: 2rem;
 }
 
 .bouton-p .btn-primary:hover {
@@ -975,8 +976,7 @@ a.btn-more {
 
 /* Styles pour le modal */
 .modal {
-    display: none;
-    /* Caché par défaut */
+    display: none; /* Caché par défaut */
     position: fixed;
     top: 0;
     left: 0;
