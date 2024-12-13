@@ -997,8 +997,9 @@ a.btn-more {
 }
 
 .modal-content h3 {
+    font-size: 1.5rem;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     font-family: var(--font-family-med), sans-serif;
     color: var(--main-color);
     text-transform: uppercase;
@@ -1588,10 +1589,10 @@ footer {
 
     .close-btn {
         /* position: relative; */
-        top: 210px;
+        top: -15rem;
         right: -10px;
         cursor: pointer;
-        font-size: 26px;
+        font-size: 1.5rem;
         background-color: var(--main-color);
         border: initial;
         border-radius: 50px;

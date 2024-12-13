@@ -1452,10 +1452,10 @@ footer {
 
     .close-btn {
         /* position: relative; */
-        top: 210px;
+        top: -15rem;
         right: -10px;
         cursor: pointer;
-        font-size: 26px;
+        font-size: 1.5rem;
         background-color: var(--main-color);
         border: initial;
         border-radius: 50px;

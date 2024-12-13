@@ -21,13 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
   showContactBtn.addEventListener("click", (event) => {
     event.preventDefault();
     contactBlock.classList.add("show");
-    console.log("clicked");
   });
 
   // Cache le bloc contact
   closeContactBtn.addEventListener("click", () => {
     contactBlock.classList.remove("show");
-    console.log("clicked");
   });
 });
 // Sélectionne les éléments
