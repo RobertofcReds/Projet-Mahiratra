@@ -380,6 +380,7 @@ a:hover {
 
 .tex-details p.p1 span span {
     color: var(--white);
+    visibility: hidden;
 }
 
 .tex-details p.p2 {
@@ -659,8 +660,8 @@ a:hover {
 
 .slide {
     min-width: 100%;
-    flex-shrink: 0;
-    /* Empêche les slides de rétrécir */
+    flex-shrink: 0; /* Empêche les slides de rétrécir */
+    opacity: 0.85;
 }
 
 .slide img {
@@ -780,14 +781,14 @@ button.next {
     width: 20vw;
     height: auto;
     margin: 100px 10px 10px 50px;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .about-images .about-image2 {
     width: 20vw;
     height: auto;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 0;
 }
 
 .about-footer {
@@ -852,7 +853,7 @@ button.next {
 .services {
     padding: 1px 2%;
     text-align: center;
-    background-color: #f9f9f9;
+    background: linear-gradient(90deg, rgba(247, 247, 255, 1) 32%, rgba(198, 199, 255, 1) 100%, rgba(148, 187, 233, 1) 100%);
 }
 
 .services h2 {
@@ -1467,6 +1468,7 @@ footer {
 
     .tex-details p.p1 span span {
         color: var(--white);
+        visibility: hidden;
     }
 
     .tex-details p.p2 {
@@ -2510,7 +2512,7 @@ footer {
     .about-images .about-image1 {
         width: 271px;
         height: auto;
-        border-radius: 10px;
+        border-radius: 0;
         margin: 0;
     }
 
@@ -2518,7 +2520,7 @@ footer {
         width: 271px;
         height: auto;
         padding: 0px;
-        border-radius: 10px;
+        border-radius: 0;
         margin-left: 20px;
     }
 
@@ -2638,7 +2640,7 @@ footer {
     .about-images .about-image1 {
         width: 30vw;
         height: auto;
-        border-radius: 10px;
+        border-radius: 0;
         margin: 0;
     }
 
@@ -2646,7 +2648,7 @@ footer {
         width: 30vw;
         height: auto;
         padding: 0px;
-        border-radius: 10px;
+        border-radius: 0;
         margin-left: 20px;
     }
 
@@ -2786,7 +2788,7 @@ footer {
     .about-images .about-image1 {
         width: 30vw;
         height: auto;
-        border-radius: 10px;
+        border-radius: 0;
         margin: 0;
     }
 
@@ -2794,7 +2796,7 @@ footer {
         width: 30vw;
         height: auto;
         padding: 0px;
-        border-radius: 10px;
+        border-radius: 0;
         margin-left: 20px;
     }
 

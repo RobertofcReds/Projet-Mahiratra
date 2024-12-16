@@ -376,6 +376,7 @@ a:hover {
 
 .tex-details p.p1 span span {
     color: var(--white);
+    visibility: hidden;
 }
 
 .tex-details p.p2 {
@@ -628,6 +629,7 @@ a:hover {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    opacity: 0.85;
 }
 
 .slide {
@@ -1213,6 +1215,7 @@ div>p.stil {
 
     .tex-details p.p1 span span {
         color: var(--white);
+        visibility: hidden;
     }
 
     .tex-details p.p2 {

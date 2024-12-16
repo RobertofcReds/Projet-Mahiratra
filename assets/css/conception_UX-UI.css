@@ -249,6 +249,7 @@ a:hover {
 
 .tex-details p.p1 span span {
     color: var(--white);
+    visibility: hidden;
 }
 
 .tex-details p.p2 {
@@ -565,6 +566,7 @@ a:hover {
     padding: 180px 6%;
     text-align: center;
     color: var(--white);
+    opacity: 0.85;
 }
 
 .hero::before {
@@ -1335,6 +1337,7 @@ footer {
 
     .tex-details p.p1 span span {
         color: var(--white);
+        visibility: hidden;
     }
 
     .tex-details p.p2 {

@@ -379,6 +379,7 @@ a:hover {
 
 .tex-details p.p1 span span {
     color: var(--white);
+    visibility: hidden;
 }
 
 .tex-details p.p2 {
@@ -592,6 +593,7 @@ a:hover {
     padding: 180px 6%;
     text-align: center;
     color: var(--white);
+    opacity: 0.85;
 }
 
 .hero::before {
@@ -814,12 +816,15 @@ a:hover {
     width: 5rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .cadreA .ordre1 {
     width: 4rem;
     display: flex;
     justify-content: center;
+    padding: 0 0.5rem;
+    margin-bottom: 0.7rem;
 }
 
 .cadreA .fa-solid {
@@ -1267,6 +1272,7 @@ footer {
 
     .tex-details p.p1 span span {
         color: var(--white);
+        visibility: hidden;
     }
 
     .tex-details p.p2 {
@@ -2015,7 +2021,7 @@ footer {
     }
 
     .grid .texte-adresse {
-        font-family: var(--font-family-med), sans-serif;
+        font-family: var(--font-family-reg), sans-serif;
     }
 }
 
@@ -2071,6 +2077,15 @@ footer {
         width: 90%;
     }
 
+    .cadreA .ordre {
+        margin-bottom: 1rem;
+    }
+    
+    .cadreA .ordre1 {
+        margin-bottom: 0.3rem;
+        padding: 0;
+    }
+
     .cadreA .fa-solid {
         font-size: 2.8rem;
         color: var(--main-color);
@@ -2088,7 +2103,7 @@ footer {
     }
 
     .grid .texte-adresse {
-        font-family: var(--font-family-med), sans-serif;
+        font-family: var(--font-family-reg), sans-serif;
         margin-bottom: 10px;
     }
 }
