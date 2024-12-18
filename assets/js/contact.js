@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevResultBtn = document.getElementById("prevResult");
     const nextResultBtn = document.getElementById("nextResult");
 
-    const searchableElements = document.querySelectorAll("h1, h2, h3, a");
+    const searchableElements = document.querySelectorAll("h1, h2, h3, a, p");
 
     let results = [];
     let currentIndex = 0;

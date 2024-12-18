@@ -89,7 +89,7 @@
                                 <i class="fa-solid fa-comments"></i>
                             </i>
                         </div>
-                        <button type="submit">SOUMETTRE</button>
+                        <button type="submit" id="btn-soumettre">SOUMETTRE</button>
                     </div>
                 </form>
                 <!-- Conteneur pour afficher le message de notification -->
@@ -124,16 +124,12 @@
             <div class="centre">
                 <div class="espaceX">
                     <span class="search-icon" id="showSearch"><i class="fa-solid fa-search"></i></span>
-                    <!-- <a href="#"><img class="header-icon" id="showSearch" src="./assets/image/chercher.png"
-                            alt="Icon pour chercher"></a> -->
                 </div>
                 <a href="contact.html" class="btn-secondary contact-btn">Contact</a>
                 <div class="espaceX">
                     <span class="m-contact-icon" id="showContact"><i class="fa-solid fa-border-all"
                             style="margin-left: 30px; margin-right: 10px;"></i></span>
                 </div>
-                <!-- <a href="#"><img class="header-icon" id="showContact" src="./assets/image/menu.png"
-                        alt="Menu pour contact"></a> -->
             </div>
         </nav>
     </section>
@@ -163,33 +159,33 @@
 
                         <div class="form-group">
                             <label for="name">VOTRE NOM</label>
-                            <input type="text" id="name" name="name" placeholder="Entrez Votre Nom" required>
+                            <input type="text" id="name" name="name" class="name" placeholder="Entrez Votre Nom" required>
                             <i class="icon-user">
                                 <i class="fa-solid fa-user"></i>
                             </i>
                         </div>
                         <div class="form-group">
                             <label for="email">VOTRE EMAIL</label>
-                            <input type="email" id="email" name="email" placeholder="Entrez Votre Email" required>
+                            <input type="email" id="email" name="email" class="email" placeholder="Entrez Votre Email" required>
                             <i class="icon-email">
                                 <i class="fa-solid fa-envelope"></i>
                             </i>
                         </div>
                         <div class="form-group">
                             <label for="subject">SUJET</label>
-                            <input type="text" id="subject" name="subject" placeholder="Entrez Votre Sujet" required>
+                            <input type="text" id="subject" name="subject" class="subject" placeholder="Entrez Votre Sujet" required>
                             <i class="icon-folder">
                                 <i class="fa-solid fa-folder"></i>
                             </i>
                         </div>
                         <div class="form-group">
                             <label for="message">VOTRE MESSAGE (OPTIONNEL)</label>
-                            <textarea id="message" name="message" placeholder="Entrez Votre Message"></textarea>
+                            <textarea id="message" name="message" class="message" placeholder="Entrez Votre Message"></textarea>
                             <i class="icon-message">
                                 <i class="fa-solid fa-comments"></i>
                             </i>
                         </div>
-                        <button type="submit">SOUMETTRE</button>
+                        <button type="submit" id="btn-submit">SOUMETTRE</button>
                     </div>
                 </form>
                 <!-- Conteneur pour afficher le message de notification -->
@@ -329,7 +325,7 @@
     </footer>
 
     <div class="back-to-top-box">
-        <button class="btn-back" onclick="topFunction()">
+        <button class="btn-back" id="btnBack" onclick="topFunction()">
             <i class="fa fa-arrow-up"></i>
         </button>
     </div>
