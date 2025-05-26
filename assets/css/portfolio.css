@@ -261,9 +261,11 @@ a:hover {
     top: -500%;
     cursor: pointer;
     font-size: 2rem;
-    background-color: var(--main-color); /* border: 2px solid var(--white); */
+    background-color: var(--main-color);
+    /* border: 2px solid var(--white); */
     color: var(--white);
-    transition: top 1s cubic-bezier(0.01, 0.51, 0, 1); /* Animation */
+    transition: top 1s cubic-bezier(0.01, 0.51, 0, 1);
+    /* Animation */
     z-index: 10000;
     padding: 20px;
     border-radius: 26px;
@@ -317,8 +319,6 @@ a:hover {
     position: relative;
     height: auto;
     margin: 0 auto;
-    /* margin-top: 100px; */
-    /* margin-bottom: 30px; */
     align-items: center;
     border: 1px solid var(--main-color);
     border-radius: 20px;
@@ -482,11 +482,14 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    display: none; /* Caché par défaut */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent */
+    display: none;
+    /* Caché par défaut */
     justify-content: center;
     align-items: center;
-    z-index: 1000000; /* Assure que ça reste au-dessus */
+    z-index: 1000000;
+    /* Assure que ça reste au-dessus */
 }
 
 #notificatione-overlay.hidden {
@@ -497,16 +500,19 @@ a:hover {
 #notificatione {
     margin: 0 10px;
     padding: 20px;
-    background-color: #dff0d8; /* Vert clair */
-    color: #3c763d; /* Vert foncé */
+    background-color: #dff0d8;
+    /* Vert clair */
+    color: #3c763d;
+    /* Vert foncé */
     border: 1px solid #d6e9c6;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#notificatione p{
-    color: #3c763d; /* Vert foncé */
+#notificatione p {
+    color: #3c763d;
+    /* Vert foncé */
 }
 
 /* Bouton "OK" */
@@ -649,29 +655,101 @@ a:hover {
 }
 
 
-/* Section détails carrière */
 
-section.det-carriere {
-    padding: 1rem 1%;
+
+
+/* Section portfolio details */
+
+.portfolio-section.is-relative {
+    z-index: 1;
+    padding-bottom: 0;
+    position: relative;
 }
 
-.det-content {
-    display: block;
+.portfolio-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.beige--container.is--relative {
+    z-index: 1;
+    position: relative;
+}
+
+.beige--container {
+    width: 90%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+}
+
+.section-header--item {
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.section-heading {
     text-align: center;
+    font-family: var(--font-family-med), sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
-.det-content h1 {
+.section-subheader {
+    text-align: center;
+    font-family: var(--font-family-reg), sans-serif;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contentwrapper.three-columnproj {
+    flex-wrap: wrap;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    display: flex;
+    position: relative;
+}
+
+/* Card image info */
+.corp-ima {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.125);
+    max-width: 23.75rem;
+    margin: 1rem 1.5rem;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.titre-info {
+    display: flex;
+    font-size: 25px;
     font-weight: normal;
     font-family: var(--font-family-med), sans-serif;
-    font-size: 1.7rem;
-    color: var(--black);
+    color: var(--main-color);
+    margin: 10px 0;
 }
 
-.det-content p {
-    font-weight: normal;
+.image-info img {
+    width: 23.75rem;
+    height: auto;
+    cursor: pointer;
+}
+
+h2.grtitre-info {
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+p.details-info {
     font-family: var(--font-family-reg), sans-serif;
-    font-size: 1.5rem;
-    color: var(--black);
 }
 
 
@@ -737,7 +815,8 @@ div>p.stil {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50; /* Vert pour succès */
+    background-color: #4CAF50;
+    /* Vert pour succès */
     color: white;
     padding: 15px 20px;
     border-radius: 5px;
@@ -1729,58 +1808,95 @@ div>p.stil {
     }
 }
 
-/* SECTION details carrière */
-@media (max-width: 768px) {
-    /* Section détails carrière */
-
-    section.det-carriere {
-        padding: 1rem 1%;
-    }
-
-    .det-content {
-        display: block;
-        text-align: center;
-    }
-
-    .det-content h1 {
-        font-weight: normal;
-        font-family: var(--font-family-med), sans-serif;
-        font-size: 1.3rem;
-        color: var(--black);
-    }
-
-    .det-content p {
-        font-weight: normal;
-        font-family: var(--font-family-reg), sans-serif;
-        font-size: 1.1rem;
-        color: var(--black);
+/* SECTION portfolio details */
+@media (max-width: 1354px) {
+    .contentwrapper.three-columnproj {
+        flex-wrap: wrap;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        display: flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        position: relative;
     }
 }
 
-@media (max-width: 480px) {
-    /* Section détails carrière */
+@media (max-width: 420px) {
 
-    section.det-carriere {
-        padding: 1rem 1%;
+    /* Card image info */
+    .corp-ima {
+        display: flex;
+        align-items: center;
+        background-color: var(--white);
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.125);
+        max-width: 20.75rem;
+        margin: 1rem 1.5rem;
+        padding: 10px;
+        flex-direction: column;
     }
 
-    .det-content {
-        display: block;
+    .image-info img {
+        width: 20.75rem;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* texte avant */
+    .section-heading {
         text-align: center;
+        font-family: var(--font-family-med), sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    
+    .section-subheader {
+        text-align: center;
+        font-family: var(--font-family-reg), sans-serif;
+        max-width: 80ch;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
-    .det-content h1 {
+    /* Card image info */
+    .corp-ima {
+        display: flex;
+        align-items: center;
+        background-color: var(--white);
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.125);
+        max-width: 18.75rem;
+        margin: 0.8rem 1.2rem;
+        padding: 8px;
+        flex-direction: column;
+    }
+
+    .titre-info {
+        display: flex;
+        font-size: 20px;
         font-weight: normal;
         font-family: var(--font-family-med), sans-serif;
-        font-size: 1.1rem;
-        color: var(--black);
+        color: var(--main-color);
+        margin: 8px 0;
     }
 
-    .det-content p {
-        font-weight: normal;
+    .image-info img {
+        width: 18.75rem;
+        height: auto;
+        cursor: pointer;
+    }
+
+    h2.grtitre-info {
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    p.details-info {
         font-family: var(--font-family-reg), sans-serif;
-        font-size: 0.8rem;
-        color: var(--black);
     }
 }
 
